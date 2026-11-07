@@ -50,6 +50,7 @@
           '<td><span class="brand">' + esc(h.brand) + "</span><strong>" + esc(h.name) + "</strong></td>" +
           '<td class="num">' + h.lumens.toLocaleString() + " lm" + bar(h.lumens, maxL) + "</td>" +
           '<td class="num">' + h.weight + " g</td>" +
+          "<td>" + (h.midRuntime ? esc(h.midRuntime) : "—") + "</td>" +
           "<td>" + esc(h.runtime) + "</td>" +
           '<td><span class="tag tag-' + (h.battery === "充電式" ? "charge" : "hybrid") + '">' + esc(h.battery) + "</span></td>" +
           "<td>" + esc(h.water) + "</td>" +
@@ -70,7 +71,8 @@
           "<div><dt>明るさ</dt><dd>" + h.lumens.toLocaleString() + " lm</dd></div>" +
           "<div><dt>重さ</dt><dd>" + h.weight + " g</dd></div>" +
           "<div><dt>防水</dt><dd>" + esc(h.water) + "</dd></div>" +
-          "<div><dt>点灯時間</dt><dd>" + esc(h.runtime) + "</dd></div>" +
+          "<div><dt>点灯時間（中間）</dt><dd>" + (h.midRuntime ? esc(h.midRuntime) : "—") + "</dd></div>" +
+          "<div><dt>点灯時間（最長）</dt><dd>" + esc(h.runtime) + "</dd></div>" +
           "</dl>" +
           '<p class="battery-note">電池：' + esc(h.batteryNote) + "</p>" +
           '<p class="card-price">' + yen(h.price) + "</p>" +
