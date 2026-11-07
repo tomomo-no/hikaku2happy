@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>軽量登山テント比較 2026｜1.5kg以下のソロ・2人用テント約50モデル｜ひかくハッピー</title>
+  <meta name="description" content="1.5kg前後以下の軽量な登山用テントを12メーカー約50モデルで比較。シングルウォール・ダブルウォール、重さ、室内の高さ、床の広さ、前室、自立式かどうか、価格を一覧表で比べられます。">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="軽量登山テント比較 2026｜ひかくハッピー">
+  <meta property="og:description" content="1.5kg以下の登山テントを、重さ・広さ・前室・価格で一覧比較。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hikaku2happy.com/tent/">
+  <link rel="canonical" href="https://hikaku2happy.com/tent/">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="/">ひかく<span>ハッピー</span></a>
+      <nav>
+        <a href="/headlamp/">ヘッドランプ</a>
+        <a href="/tent/" class="on">テント</a>
+        <a href="/about.html">運営者情報</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">2026年11月更新</p>
+      <h1>軽量登山テント比較</h1>
+      <p class="lead">重さ1.5kg前後までの山岳テントを、12メーカー・<span id="total"></span>モデルで比べられます。<br class="pc">シングル／ダブルウォール、重さ、室内の高さ、床の広さ、前室の広さ、価格を一覧で。</p>
+      <p class="ad-note">※本サイトはアフィリエイト広告を利用しています。</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section class="picks" aria-label="目的別おすすめ">
+      <h2>目的別のおすすめ</h2>
+      <div class="pick-grid">
+        <div class="pick"><span class="pick-label">はじめての1張り</span><strong>モンベル ステラリッジ テント1</strong><span>1.14kg・テント場の大定番</span></div>
+        <div class="pick"><span class="pick-label">軽さと使いやすさ</span><strong>ビッグアグネス コッパースプール UL1</strong><span>911g・自立式・前室広め</span></div>
+        <div class="pick"><span class="pick-label">とにかく軽く</span><strong>ヘリテイジ クロスオーバードーム〈2G〉</strong><span>630g・自立式シングルウォール</span></div>
+        <div class="pick"><span class="pick-label">予算をおさえたい</span><strong>ネイチャーハイク クラウドアップ UL 1</strong><span>1.06kg・約2.5万円</span></div>
+      </div>
+    </section>
+
+    <section id="list">
+      <h2>スペック比較表</h2>
+      <div class="controls">
+        <div class="control">
+          <span class="control-label">メーカー</span>
+          <div class="chips" id="brandChips"></div>
+        </div>
+        <div class="control">
+          <span class="control-label">人数</span>
+          <div class="chips" id="capChips"></div>
+        </div>
+        <div class="control">
+          <span class="control-label">構造</span>
+          <div class="chips" id="wallChips"></div>
+        </div>
+        <div class="control">
+          <label class="control-label" for="sort">並び替え</label>
+          <select id="sort">
+            <option value="weight-asc">軽い順</option>
+            <option value="price-asc">価格が安い順</option>
+            <option value="height-desc">室内が高い順</option>
+            <option value="floor-desc">床が広い順</option>
+          </select>
+        </div>
+      </div>
+      <p class="count" id="count"></p>
+
+      <div class="table-scroll">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>モデル</th>
+              <th>人数</th>
+              <th>構造</th>
+              <th>重さ<br><small>（最小重量）</small></th>
+              <th>室内の高さ</th>
+              <th>床の広さ<br><small>（長さ×幅）</small></th>
+              <th>前室</th>
+              <th>自立</th>
+              <th>参考価格</th>
+              <th>購入</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+
+      <div class="cards" id="cards"></div>
+      <p class="small">
+        ※重さはメーカー公表の「最小重量」（本体＋フライ＋ポール。ペグ・張り綱・収納袋は含みません）です。実際に持ち歩く重さはこれより100〜200gほど重くなります。<br>
+        ※床の広さは「長さ×幅」。足元が細くなる形のテントは「頭側〜足側」の幅で表示し、面積は平均の幅で計算しています。<br>
+        ※前室はメーカーが公表している奥行き、または面積です。公表されていないものは「—」としています。<br>
+        ※「自立」：自立＝ポールだけで形になる／半自立＝一部ペグで固定が必要／非自立＝ペグや張り綱がないと立たない。メーカーが明記していないものは「—」としています。<br>
+        ※価格は2026年11月時点の国内の参考価格（税込・目安）です。モンベルのステラリッジは本体とレインフライが別売りのため、合計額を表示しています。最新の価格は各ショップでご確認ください。
+      </p>
+    </section>
+
+    <section id="guide" class="guide">
+      <h2>登山用テントの選び方</h2>
+      <div class="guide-grid">
+        <div class="guide-item">
+          <h3>① シングルかダブルか</h3>
+          <p><strong>ダブルウォール</strong>は本体とフライの二重構造。結露しにくく、前室があって雨の日も快適。<strong>シングルウォール</strong>は1枚で軽く設営が速い反面、結露しやすく前室がないものが多いです。迷ったらダブルウォールが安心。</p>
+        </div>
+        <div class="guide-item">
+          <h3>② 重さ</h3>
+          <p>テント泊の荷物のなかでも重いもののひとつ。<strong>1kg前後</strong>なら軽量、<strong>700g以下</strong>はウルトラライト級。軽いほど生地が薄くなるので、扱いに少し気をつかいます。</p>
+        </div>
+        <div class="guide-item">
+          <h3>③ 室内の高さと床の広さ</h3>
+          <p>高さ<strong>100cm以上</strong>あると中で座って着替えや食事がしやすいです。1人用でも、荷物を中に入れたいなら<strong>2人用</strong>を選ぶ人も多いです。</p>
+        </div>
+        <div class="guide-item">
+          <h3>④ 前室</h3>
+          <p>入口の外側の屋根付きスペース。靴やザック、濡れたものを置いたり、雨の日に調理したりできます。<strong>奥行き50cm以上</strong>あると使いやすいです。</p>
+        </div>
+        <div class="guide-item">
+          <h3>⑤ 自立式かどうか</h3>
+          <p><strong>自立式</strong>はペグが効きにくい岩場や木の台の上でも立てやすく、日本のテント場向き。<strong>非自立式</strong>は軽いですが、ペグと張り綱の扱いに慣れが必要です。</p>
+        </div>
+        <div class="guide-item">
+          <h3>⑥ 入口の位置</h3>
+          <p>入口が<strong>長い辺</strong>にあると出入りがラクで前室も広くなりがち。<strong>短い辺</strong>は狭いテント場でも張りやすいです。2人で使うなら入口が2つあると便利。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><a href="/">トップ</a>｜<a href="/headlamp/">ヘッドランプ比較</a>｜<a href="/tent/">テント比較</a>｜<a href="/about.html">運営者情報・免責事項・広告について</a></p>
+      <p>© 2026 ひかくハッピー（hikaku2happy.com）</p>
+    </div>
+  </footer>
+
+  <script src="/tent/data.js"></script>
+  <script src="/tent/app.js"></script>
+  <script>document.getElementById("total").textContent = TENTS.length;</script>
+</body>
+</html>
