@@ -54,6 +54,7 @@
           "<td>" + esc(h.runtime) + "</td>" +
           '<td><span class="tag tag-' + (h.battery === "充電式" ? "charge" : "hybrid") + '">' + esc(h.battery) + "</span></td>" +
           "<td>" + esc(h.water) + "</td>" +
+          "<td>" + esc(h.red) + "</td>" +
           '<td class="num price">' + yen(h.price) + "</td>" +
           '<td class="buy">' + buyLinks(h) + "</td>" +
           "</tr>"
@@ -71,6 +72,7 @@
           "<div><dt>明るさ</dt><dd>" + h.lumens.toLocaleString() + " lm</dd></div>" +
           "<div><dt>重さ</dt><dd>" + h.weight + " g</dd></div>" +
           "<div><dt>防水</dt><dd>" + esc(h.water) + "</dd></div>" +
+          "<div><dt>赤色ライト</dt><dd>" + esc(h.red) + "</dd></div>" +
           "<div><dt>点灯時間（中間）</dt><dd>" + (h.midRuntime ? esc(h.midRuntime) : "—") + "</dd></div>" +
           "<div><dt>点灯時間（最長）</dt><dd>" + esc(h.runtime) + "</dd></div>" +
           "</dl>" +
