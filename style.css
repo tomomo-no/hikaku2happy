@@ -181,3 +181,14 @@ table.simple th { background: #f0eee7; font-size: 13px; }
 @media (min-width: 761px) and (max-width: 1000px) {
   .cards { display: none; }
 }
+
+/* トレランザック：折り返すセル（ポケットの位置・開け方など） */
+.spec-table td.wrap-cell { white-space: normal; min-width: 130px; max-width: 230px; font-size: 13px; line-height: 1.5; }
+.spec-table td.wrap-cell .pk { font-size: 15px; }
+.specs div.wide { grid-column: 1 / -1; }
+.specs dd.light { font-weight: 400; font-size: 13px; line-height: 1.6; }
+
+@media (max-width: 760px) {
+  .logo { white-space: nowrap; font-size: 18px; }
+  .site-header nav { gap: 10px; font-size: 12px; }
+}
