@@ -71,6 +71,19 @@ select { font: inherit; font-size: 14px; padding: 6px 10px; border-radius: 8px; 
 .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 6px; background: #f0eee7; color: var(--muted); white-space: nowrap; }
 .tag-charge { background: #e3edf7; color: #2a5a85; }
 .tag-hybrid { background: #fcefd6; color: #8a5a00; }
+.tag-double { background: #e3edf7; color: #2a5a85; }
+.tag-single { background: #fcefd6; color: #8a5a00; }
+.sub { display: block; font-size: 11px; font-weight: 400; color: var(--muted); }
+.site-header nav a.on { color: var(--accent); font-weight: 700; }
+
+/* トップページのカテゴリ */
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.cat { display: flex; flex-direction: column; gap: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; text-decoration: none; color: var(--ink); transition: border-color .15s, transform .15s; }
+.cat:hover { border-color: var(--accent); transform: translateY(-2px); }
+.cat-icon { font-size: 32px; line-height: 1; }
+.cat strong { font-size: 18px; }
+.cat span { font-size: 14px; color: var(--muted); }
+.cat em { font-style: normal; font-size: 13px; font-weight: 700; color: var(--accent); margin-top: 4px; }
 
 .buy { display: flex; gap: 6px; flex-wrap: wrap; }
 .btn { display: inline-block; text-decoration: none; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 6px; color: #fff; white-space: nowrap; }
