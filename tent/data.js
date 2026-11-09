@@ -5,6 +5,7 @@
 // ・価格は2026年11月時点の国内の参考価格（税込・目安）。わからないものは null（表では「要確認」）。
 // ・アフィリエイトリンクを取得したら、links の "" の中にURLを貼ってください。
 //   空のままなら、Amazon・楽天の検索ページへのリンクが自動で表示されます。
+// ・noRakuten: true の商品は楽天ボタンを出さず、official のURLで「公式サイト」ボタンを出します。
 const TENTS = [
   // ===== ネイチャーハイク (Naturehike) =====
   {
@@ -98,6 +99,8 @@ const TENTS = [
     priceNote: "本体33,000円＋レインフライ16,000円",
     point: "日本の山岳テントの大定番。テント場でよく見かける安心感と、扱いやすさが魅力。",
     tags: ["定番"],
+    noRakuten: true, // 楽天で取扱いなし（2026年11月確認）
+    official: "https://webshop.montbell.jp/goods/disp.php?product_id=1122814",
     links: { amazon: "", rakuten: "", a8: "" }
   },
   {
@@ -136,6 +139,8 @@ const TENTS = [
     priceNote: "本体34,500円＋レインフライ16,000円",
     point: "2026年春の新型。入口が長い辺にあり、前室が広く出入りがラク。",
     tags: ["2026新型", "前室広め"],
+    noRakuten: true, // 楽天で取扱いなし（2026年11月確認）
+    official: "https://webshop.montbell.jp/goods/disp.php?product_id=1122823",
     links: { amazon: "", rakuten: "", a8: "" }
   },
   {
@@ -155,6 +160,8 @@ const TENTS = [
     priceNote: "本体36,500円＋レインフライ17,000円",
     point: "トレール1の2人用。広い床と広い前室で、雨の日のテント泊も快適。",
     tags: ["2026新型", "前室広め", "広め"],
+    noRakuten: true, // 楽天で取扱いなし（2026年11月確認）
+    official: "https://webshop.montbell.jp/goods/disp.php?product_id=1122824",
     links: { amazon: "", rakuten: "", a8: "" }
   },
   {
@@ -888,6 +895,8 @@ const TENTS = [
     priceNote: "日本では海外通販が中心（米国価格 599ドル）",
     point: "348gの超軽量。トレッキングポール1本で立てる、ULハイカー定番のシェルター。",
     tags: ["超軽量", "シングルウォール", "天井高め"],
+    noRakuten: true, // 楽天で取扱いなし（2026年11月確認）
+    official: "https://zpacks.com/products/plexsolo-tent",
     links: { amazon: "", rakuten: "", a8: "" }
   },
   {
@@ -908,6 +917,8 @@ const TENTS = [
     priceNote: "日本では海外通販が中心（米国価格 749ドル）",
     point: "2人用で約500g。ロングトレイルを歩く人に愛用者が多いモデル。",
     tags: ["超軽量", "シングルウォール", "入口2つ"],
+    noRakuten: true, // 楽天で取扱いなし（2026年11月確認）
+    official: "https://zpacks.com/products/duplex-tent",
     links: { amazon: "", rakuten: "", a8: "" }
   },
 
@@ -928,6 +939,8 @@ const TENTS = [
     price: 57200,
     point: "広い前室を持つ1人用シングルウォール。",
     tags: ["シングルウォール"],
+    noRakuten: true, // 楽天で取扱いなし（2026年11月確認）
+    official: "https://www.paagoworks.com/collections/camp/products/tent-zenn-dome-shelter",
     links: { amazon: "", rakuten: "", a8: "" }
   },
   {
@@ -946,6 +959,8 @@ const TENTS = [
     price: 59400,
     point: "1〜2人で使える広めの床と、広い前室が特徴。ポールとペグで張る非自立式。",
     tags: ["個性派", "広め"],
+    noRakuten: true, // 楽天で取扱いなし（2026年11月確認）
+    official: "https://www.paagoworks.com/products/ninja-tent",
     links: { amazon: "", rakuten: "", a8: "" }
   }
 ];

@@ -209,6 +209,25 @@ const HEADLAMPS = [
     links: { amazon: "", rakuten: "", a8: "" }
   },
   {
+    id: "nitecore-ut27",
+    brand: "ナイトコア",
+    name: "UT27",
+    lumens: 800,
+    weight: 74,
+    runtime: "最大14.5時間",
+    midRuntime: "280lmで6.5時間",
+    battery: "ハイブリッド",
+    batteryNote: "専用充電池 HLB1500（USB-C）／単4電池×3本",
+    water: "IP66",
+    red: "あり",
+    waterLevel: 2,
+    price: 13200,
+    point: "電球色・昼白色・昼光色の3色を切り替えられる、トレイルランニング向けのモデル。霧や雨の日は電球色が見やすいです。",
+    tags: ["乾電池OK", "3色切替", "実機レビューあり"],
+    review: "/headlamp/review-ut27.html",
+    links: { amazon: "", rakuten: "", a8: "" }
+  },
+  {
     id: "nitecore-nu33",
     brand: "ナイトコア",
     name: "NU33",

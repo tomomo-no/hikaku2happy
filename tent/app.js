@@ -17,16 +17,36 @@
     return t.length + "×" + w + " cm";
   }
 
+
+  // 商品画像：img/<id>.webp を置くと自動で表示。無い場合はプレースホルダー
+  // （別のファイル名やURLを使うときは data.js に image: "..." を書く）
+  function thumb(item, cls) {
+    const src = item.image || "img/" + item.id + ".webp";
+    return '<span class="' + cls + '"><img src="' + esc(src) + '" alt="' + esc(item.brand + " " + item.name) + '" loading="lazy" width="400" height="400" onerror="this.parentNode.classList.add(\'noimg\');this.remove()"><span class="ph" aria-hidden="true">⛺</span></span>';
+  }
+
+  // 楽天アフィリエイトID（楽天アフィリエイトの管理画面のIDに変えるときはここだけ直す）
+  const RAKUTEN_AFF_ID = "59502494.8a113493.59502495.49954f2c";
+  // 楽天のURLをアフィリエイトリンクに変換（すでにアフィリエイトリンクならそのまま）
+  function rakutenAff(url) {
+    if (!RAKUTEN_AFF_ID || url.indexOf("hb.afl.rakuten.co.jp") !== -1) return url;
+    return "https://hb.afl.rakuten.co.jp/ichiba/" + RAKUTEN_AFF_ID + "/?pc=" + encodeURIComponent(url) + "&link_type=hybrid_url";
+  }
+
   // アフィリエイトURLが空なら、Amazon・楽天の検索ページを使う
   function buyLinks(item) {
     const q = encodeURIComponent(item.search + " テント");
     const amazon = item.links.amazon || "https://www.amazon.co.jp/s?k=" + q;
-    const rakuten = item.links.rakuten || "https://search.rakuten.co.jp/search/mall/" + q + "/";
-    let html =
-      '<a class="btn btn-amazon" href="' + esc(amazon) + '" target="_blank" rel="nofollow sponsored noopener">Amazon</a>' +
-      '<a class="btn btn-rakuten" href="' + esc(rakuten) + '" target="_blank" rel="nofollow sponsored noopener">楽天</a>';
+    const rakuten = rakutenAff(item.links.rakuten || "https://search.rakuten.co.jp/search/mall/" + q + "/");
+    let html = '<a class="btn btn-amazon" href="' + esc(amazon) + '" target="_blank" rel="nofollow sponsored noopener">Amazon</a>';
+    // 楽天で売っていない商品は楽天ボタンを出さない
+    if (!item.noRakuten) {
+      html += '<a class="btn btn-rakuten" href="' + esc(rakuten) + '" target="_blank" rel="nofollow sponsored noopener">楽天</a>';
+    }
     if (item.links.a8) {
       html += '<a class="btn btn-shop" href="' + esc(item.links.a8) + '" target="_blank" rel="nofollow sponsored noopener">公式ショップ</a>';
+    } else if (item.official) {
+      html += '<a class="btn btn-shop" href="' + esc(item.official) + '" target="_blank" rel="nofollow noopener">公式サイト</a>';
     }
     return html;
   }
@@ -65,7 +85,7 @@
       .map(
         (t) =>
           "<tr>" +
-          '<td><span class="brand">' + esc(t.brand) + "</span><strong>" + esc(t.name) + "</strong></td>" +
+          '<td><div class="model">' + thumb(t, "thumb") + '<span class="model-name"><span class="brand">' + esc(t.brand) + "</span><strong>" + esc(t.name) + "</strong></span></div></td>" +
           "<td>" + t.cap + "人用</td>" +
           "<td>" + wallTag(t) + "</td>" +
           '<td class="num">' + weightCell(t) + bar(t.weight, maxW) + "</td>" +
@@ -82,7 +102,7 @@
     document.getElementById("cards").innerHTML = list
       .map(
         (t) =>
-          '<article class="card">' +
+          '<article class="card">' + thumb(t, "card-img") +
           '<div class="card-head"><span class="brand">' + esc(t.brand) + "</span><h3>" + esc(t.name) + "</h3>" +
           '<div class="tags">' + wallTag(t) + t.tags.map((x) => '<span class="tag">' + esc(x) + "</span>").join("") + "</div></div>" +
           '<p class="point">' + esc(t.point) + "</p>" +
