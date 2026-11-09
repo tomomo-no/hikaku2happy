@@ -6,11 +6,32 @@
   const yen = (n) => (n == null ? "要確認" : "約" + n.toLocaleString("ja-JP") + "円");
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
+
+  // 商品画像：img/<id>.webp を置くと自動で表示。無い場合はプレースホルダー
+  // （別のファイル名やURLを使うときは data.js に image: "..." を書く）
+  function thumb(item, cls) {
+    const src = item.image || "img/" + item.id + ".webp";
+    return '<span class="' + cls + '"><img src="' + esc(src) + '" alt="' + esc(item.brand + " " + item.name) + '" loading="lazy" width="400" height="400" onerror="this.parentNode.classList.add(\'noimg\');this.remove()"><span class="ph" aria-hidden="true">🔦</span></span>';
+  }
+
+  // 実機レビューがある商品にはレビューへのリンクを出す
+  function reviewLink(item) {
+    return item.review ? '<a class="review-link" href="' + esc(item.review) + '">実機レビューを読む →</a>' : "";
+  }
+
+  // 楽天アフィリエイトID（楽天アフィリエイトの管理画面のIDに変えるときはここだけ直す）
+  const RAKUTEN_AFF_ID = "59502494.8a113493.59502495.49954f2c";
+  // 楽天のURLをアフィリエイトリンクに変換（すでにアフィリエイトリンクならそのまま）
+  function rakutenAff(url) {
+    if (!RAKUTEN_AFF_ID || url.indexOf("hb.afl.rakuten.co.jp") !== -1) return url;
+    return "https://hb.afl.rakuten.co.jp/ichiba/" + RAKUTEN_AFF_ID + "/?pc=" + encodeURIComponent(url) + "&link_type=hybrid_url";
+  }
+
   // アフィリエイトURLが空なら、Amazon・楽天の検索ページを使う
   function buyLinks(item) {
     const q = encodeURIComponent(item.brand + " " + item.name + " ヘッドランプ");
     const amazon = item.links.amazon || "https://www.amazon.co.jp/s?k=" + q;
-    const rakuten = item.links.rakuten || "https://search.rakuten.co.jp/search/mall/" + q + "/";
+    const rakuten = rakutenAff(item.links.rakuten || "https://search.rakuten.co.jp/search/mall/" + q + "/");
     let html =
       '<a class="btn btn-amazon" href="' + esc(amazon) + '" target="_blank" rel="nofollow sponsored noopener">Amazon</a>' +
       '<a class="btn btn-rakuten" href="' + esc(rakuten) + '" target="_blank" rel="nofollow sponsored noopener">楽天</a>';
@@ -47,7 +68,7 @@
       .map(
         (h) =>
           "<tr>" +
-          '<td><span class="brand">' + esc(h.brand) + "</span><strong>" + esc(h.name) + "</strong></td>" +
+          '<td><div class="model">' + thumb(h, "thumb") + '<span class="model-name"><span class="brand">' + esc(h.brand) + "</span><strong>" + esc(h.name) + "</strong>" + reviewLink(h) + "</span></div></td>" +
           '<td class="num">' + h.lumens.toLocaleString() + " lm" + bar(h.lumens, maxL) + "</td>" +
           '<td class="num">' + h.weight + " g</td>" +
           "<td>" + (h.midRuntime ? esc(h.midRuntime) : "—") + "</td>" +
@@ -64,8 +85,8 @@
     document.getElementById("cards").innerHTML = list
       .map(
         (h) =>
-          '<article class="card">' +
-          '<div class="card-head"><span class="brand">' + esc(h.brand) + "</span><h3>" + esc(h.name) + "</h3>" +
+          '<article class="card">' + thumb(h, "card-img") +
+          '<div class="card-head"><span class="brand">' + esc(h.brand) + "</span><h3>" + esc(h.name) + "</h3>" + reviewLink(h) +
           '<div class="tags">' + h.tags.map((t) => '<span class="tag">' + esc(t) + "</span>").join("") + "</div></div>" +
           '<p class="point">' + esc(h.point) + "</p>" +
           '<dl class="specs">' +

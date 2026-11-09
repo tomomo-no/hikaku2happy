@@ -24,3 +24,12 @@ links: { amazon: "https://amzn.to/xxxx", rakuten: "https://hb.afl.rakuten.co.jp/
 - フレームワーク：なし（None）
 - ビルドコマンド：空欄
 - 出力ディレクトリ：`/`（空欄でも可）
+
+## 商品画像の入れ方
+`headlamp/img/` と `tent/img/` に `<商品id>.webp`（例：`nitecore-ut27.webp`）を置くと、比較表とスマホ用カードに自動で表示されます。画像がない商品は薄いアイコンが出ます。
+- おすすめ：正方形 800×800px、WebP、1枚100KB以下
+- メーカーやショップの写真は無断で使わない（自分で撮った写真、楽天・Amazonの公式リンクツールの画像、自分で生成した画像を使う）
+
+## 楽天アフィリエイト
+`headlamp/app.js` と `tent/app.js` の `RAKUTEN_AFF_ID` にIDが入っています。楽天ボタンはすべて自動でアフィリエイトリンクになります。`data.js` の `links.rakuten` に商品ごとのリンクを貼った場合はそちらが優先されます。
+楽天で取り扱いのない商品は `noRakuten: true` と `official`（公式サイトURL）を設定すると、楽天ボタンの代わりに「公式サイト」ボタンが出ます。
