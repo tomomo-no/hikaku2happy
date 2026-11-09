@@ -8,6 +8,8 @@
   - `data.js` … ヘッドランプのデータ　`app.js` … 絞り込み・並び替え
 - `tent/` … 軽量登山テント比較（https://hikaku2happy.com/tent/）
   - `data.js` … テントのデータ　`app.js` … 絞り込み・並び替え
+- `trailpack/` … トレランザック比較（https://hikaku2happy.com/trailpack/）
+  - `data.js` … ザックのデータ　`app.js` … 絞り込み・並び替え　`guide.html` … 選び方
 - `style.css` … 全ページ共通のデザイン
 - `about.html` … 運営者情報・免責事項・広告について
 
@@ -26,10 +28,10 @@ links: { amazon: "https://amzn.to/xxxx", rakuten: "https://hb.afl.rakuten.co.jp/
 - 出力ディレクトリ：`/`（空欄でも可）
 
 ## 商品画像の入れ方
-`headlamp/img/` と `tent/img/` に `<商品id>.webp`（例：`nitecore-ut27.webp`）を置くと、比較表とスマホ用カードに自動で表示されます。画像がない商品は薄いアイコンが出ます。
+`headlamp/img/`・`tent/img/`・`trailpack/img/` に `<商品id>.webp`（例：`nitecore-ut27.webp`）を置くと、比較表とスマホ用カードに自動で表示されます。画像がない商品は薄いアイコンが出ます。
 - おすすめ：正方形 800×800px、WebP、1枚100KB以下
 - メーカーやショップの写真は無断で使わない（自分で撮った写真、楽天・Amazonの公式リンクツールの画像、自分で生成した画像を使う）
 
 ## 楽天アフィリエイト
-`headlamp/app.js` と `tent/app.js` の `RAKUTEN_AFF_ID` にIDが入っています。楽天ボタンはすべて自動でアフィリエイトリンクになります。`data.js` の `links.rakuten` に商品ごとのリンクを貼った場合はそちらが優先されます。
+`headlamp/app.js`・`tent/app.js`・`trailpack/app.js` の `RAKUTEN_AFF_ID` にIDが入っています。楽天ボタンはすべて自動でアフィリエイトリンクになります。`data.js` の `links.rakuten` に商品ごとのリンクを貼った場合はそちらが優先されます。
 楽天で取り扱いのない商品は `noRakuten: true` と `official`（公式サイトURL）を設定すると、楽天ボタンの代わりに「公式サイト」ボタンが出ます。

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>トレランザック比較 2026｜モンベル・サロモン・ノースフェイスなど容量・重さ・ポケットで比べる｜ひかくハッピー</title>
+  <meta name="description" content="トレイルランニング用ザック（ランニングベスト）をモンベル・サロモン・ザ・ノース・フェイス・パーゴワークス・ブラックダイヤモンドで比較。容量・重さ・ポケットの数と位置・開け方・ソフトフラスクの有無・ポール収納・価格を一覧表で比べられます。">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="トレランザック比較 2026｜ひかくハッピー">
+  <meta property="og:description" content="トレランザックを、容量・重さ・ポケット・開け方・価格で一覧比較。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hikaku2happy.com/trailpack/">
+  <link rel="canonical" href="https://hikaku2happy.com/trailpack/">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="/">ひかく<span>ハッピー</span></a>
+      <nav>
+        <a href="/headlamp/">ヘッドランプ</a>
+        <a href="/tent/">テント</a>
+        <a href="/trailpack/" class="on">ザック</a>
+        <a href="/about.html">運営者情報</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">2026年11月更新</p>
+      <h1>トレランザック比較</h1>
+      <p class="lead">トレイルランニング用のザック・ランニングベストを、5メーカー・<span id="total"></span>モデルで比べられます。<br class="pc">容量、重さ、ポケットの数と位置、開け方、フラスクの有無、ポール収納、価格を一覧で。</p>
+      <p class="ad-note">※本サイトはアフィリエイト広告を利用しています。</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section class="picks" aria-label="目的別おすすめ">
+      <h2>目的別のおすすめ</h2>
+      <div class="pick-grid">
+        <div class="pick"><span class="pick-label">はじめての1つ</span><strong>サロモン アクティブスキン 8 セット</strong><span>フラスク2本付き・約1.4万円</span></div>
+        <div class="pick"><span class="pick-label">予算をおさえたい</span><strong>モンベル クロスランナーパック 7</strong><span>276g・約1.2万円</span></div>
+        <div class="pick"><span class="pick-label">ロングレース</span><strong>サロモン ADVスキン 12 セット</strong><span>12L・ポケット13個</span></div>
+        <div class="pick"><span class="pick-label">ポールを使う山岳コース</span><strong>ブラックダイヤモンド ディスタンス 8</strong><span>Zポール専用スリーブ</span></div>
+      </div>
+    </section>
+
+    <section id="list">
+      <h2>スペック比較表</h2>
+      <div class="controls">
+        <div class="control">
+          <span class="control-label">メーカー</span>
+          <div class="chips" id="brandChips"></div>
+        </div>
+        <div class="control">
+          <span class="control-label">容量</span>
+          <div class="chips" id="sizeChips"></div>
+        </div>
+        <div class="control">
+          <span class="control-label">タイプ</span>
+          <div class="chips" id="styleChips"></div>
+        </div>
+        <div class="control">
+          <label class="control-label" for="sort">並び替え</label>
+          <select id="sort">
+            <option value="weight-asc">軽い順</option>
+            <option value="liters-desc">容量が大きい順</option>
+            <option value="pockets-desc">ポケットが多い順</option>
+            <option value="price-asc">価格が安い順</option>
+          </select>
+        </div>
+      </div>
+      <p class="count" id="count"></p>
+
+      <div class="table-scroll">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>モデル</th>
+              <th>容量</th>
+              <th>重さ<br><small>（本体）</small></th>
+              <th>タイプ</th>
+              <th>ポケット<br><small>（数と位置）</small></th>
+              <th>開け方<br><small>（メイン収納）</small></th>
+              <th>フラスク</th>
+              <th>ポール</th>
+              <th>参考価格</th>
+              <th>購入</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+
+      <div class="cards" id="cards"></div>
+      <p class="small">
+        ※容量・重さはメーカー公表値です。サイズ違いがあるものはMサイズ（またはユニセックス）の値です。フラスク付きのモデルは、付属品込みの重さもあわせて載せています。<br>
+        ※ポケットの数は、メーカーの説明に載っているポケットを当サイトで数えた目安です（サロモン ADVスキン、パーゴワークスはメーカー公表の数）。数え方はメーカーによって違うので、位置もあわせて見てください。<br>
+        ※「フラスク」は、水を入れてポケットに差すやわらかいボトル（ソフトフラスク）が付いてくるかどうかです。<br>
+        ※「—」はメーカーの説明に記載がないものです。<br>
+        ※価格は2026年11月時点の国内の参考価格（税込・目安）です。最新の価格は各ショップでご確認ください。<br>
+        ※商品画像はイメージです。実際の形・色とは異なります。
+      </p>
+    </section>
+
+    <section id="guide" class="guide">
+      <h2>トレランザックの選び方</h2>
+      <div class="guide-grid">
+        <div class="guide-item">
+          <h3>① 容量</h3>
+          <p>2〜3時間の練習なら<strong>5L前後</strong>、雨具や防寒着も持つ山の1日コースなら<strong>8〜12L</strong>、山小屋泊や必携品の多いロングレースなら<strong>15L以上</strong>が目安です。</p>
+        </div>
+        <div class="guide-item">
+          <h3>② 重さ</h3>
+          <p>トレランザックはどれも軽く、<strong>300g前後</strong>が中心。数十gの差より、体に合って<strong>揺れないこと</strong>のほうが走りやすさに効きます。</p>
+        </div>
+        <div class="guide-item">
+          <h3>③ ポケットの数と位置</h3>
+          <p>走りながら使うのは<strong>胸・肩まわりのポケット</strong>。水・行動食・スマホがここに入ると止まらずに済みます。背中のポケットは、ザックを下ろさずに<strong>脇から手が届く</strong>タイプが便利です。</p>
+        </div>
+        <div class="guide-item">
+          <h3>④ 開け方</h3>
+          <p><strong>ファスナー</strong>は中身が飛び出しにくく安心。<strong>上が開いたまま</strong>のタイプやひもで絞るタイプは、すばやく出し入れできて軽いですが、小物は落ちにくい場所に入れましょう。</p>
+        </div>
+        <div class="guide-item">
+          <h3>⑤ ベスト型かザック型か</h3>
+          <p><strong>ベスト型</strong>は胸までぴったり包むので揺れにくく、前のポケットが多いのが特徴。<strong>ザック型</strong>は容量が大きめで、登山やファストハイクにも使いやすいです。</p>
+        </div>
+        <div class="guide-item">
+          <h3>⑥ 水の持ち方とポール</h3>
+          <p>胸に<strong>ソフトフラスク</strong>を差すか、背中に<strong>水袋（ハイドレーション）</strong>を入れるか。フラスクが付いてこないモデルは別に買う必要があります。ポールを使うなら<strong>ポールホルダー付き</strong>を。</p>
+        </div>
+      </div>
+      <p class="guide-more"><a href="/trailpack/guide.html">トレランザックの選び方をもっと詳しく読む →</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><a href="/">トップ</a>｜<a href="/headlamp/">ヘッドランプ比較</a>｜<a href="/headlamp/guide.html">ヘッドランプの選び方</a>｜<a href="/tent/">テント比較</a>｜<a href="/tent/guide.html">テントの選び方</a>｜<a href="/trailpack/">トレランザック比較</a>｜<a href="/trailpack/guide.html">トレランザックの選び方</a>｜<a href="/about.html">運営者情報・免責事項・広告について</a></p>
+      <p>© 2026 ひかくハッピー（hikaku2happy.com）</p>
+    </div>
+  </footer>
+
+  <script src="/trailpack/data.js"></script>
+  <script src="/trailpack/app.js"></script>
+  <script>document.getElementById("total").textContent = PACKS.length;</script>
+</body>
+</html>
