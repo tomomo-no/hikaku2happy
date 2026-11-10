@@ -1,6 +1,6 @@
 (function () {
   const BRANDS = ["すべて"].concat([...new Set(BAGS.map((b) => b.brand))]);
-  const SEASONS = ["すべて", "夏山", "3シーズン", "晩秋・残雪期"];
+  const SEASONS = ["すべて", "夏山", "3シーズン", "晩秋・残雪期", "厳冬期"];
   const FILLS = ["すべて", "ダウン", "化繊"];
   const state = { brand: "すべて", season: "すべて", fill: "すべて", sort: "weight-asc" };
 
@@ -9,7 +9,7 @@
   const deg = (n) => (n == null ? "—" : (n < 0 ? "−" + -n : n) + "℃");
 
   // 季節の目安は下限温度（イスカは最低使用温度）で分ける
-  const seasonOf = (b) => (b.limit >= 4 ? "夏山" : b.limit >= -5 ? "3シーズン" : "晩秋・残雪期");
+  const seasonOf = (b) => (b.limit >= 4 ? "夏山" : b.limit >= -5 ? "3シーズン" : b.limit >= -14 ? "晩秋・残雪期" : "厳冬期");
 
   // 商品画像：img/<id>.webp を置くと自動で表示。無い場合はプレースホルダー
   // （別のファイル名やURLを使うときは data.js に image: "..." を書く）
