@@ -312,7 +312,9 @@ const JACKETS = [
     point: "化繊わたの定番。ぬれても暖かさが落ちにくく、洗濯機で洗える。ポケットにしまって持ち運べる。",
     tags: ["化繊", "ぬれに強い", "見た目◎"],
     official: "https://www.patagonia.jp/",
-    links: { amazon: "", rakuten: "", a8: "" }
+    links: { amazon: "", rakuten: "", a8: "" },
+    // 楽天の「商品リンク」（画像＋テキスト）のHTML。2026/11/11 時点 38,199円（ショップ価格）
+    rakutenHtml: `<a href="https://hb.afl.rakuten.co.jp/ichiba/59638c38.d88512dd.59638c39.ef02b02a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcotonas%2Fdcg-058%2F&amp;link_type=picttext&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/59638c38.d88512dd.59638c39.ef02b02a/?me_id=1331623&amp;item_id=10006505&amp;pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fcotonas%2Fcabinet%2Fp_abcde%2Fpatagonia-058_01.jpg%3F_ex%3D300x300&amp;s=300x300&amp;t=picttext" border="0"></a>`
   },
   {
     id: "patagonia-micro-puff-hoody",
