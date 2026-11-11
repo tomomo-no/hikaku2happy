@@ -1,4 +1,4 @@
-// 登山用・軽量ダウンジャケット（＋人気の化繊ジャケット）のデータ（メンズ）
+// 登山用・軽量ダウンジャケット（＋人気の化繊ジャケット）のデータ（メンズ中心。レディースは名前に明記）
 // ・weight は重さ（g）。モンベルは「平均重量」、ほかのメーカーは公表されているサイズの値です（weightNote にサイズを書いています）。
 //   わからないものは null（表では「要確認」、軽い順では最後）。
 // ・fp はフィルパワー（ダウンのふくらむ力）。fillGrams はダウンの量（g）。わからないものは null（表では「—」）。
@@ -12,6 +12,8 @@
 //   楽天の「商品リンク」で出てくる画像URL（https://thumbnail.image.rakuten.co.jp/... など）を image: "..." に貼ってもOK。
 //   楽天の画像は自動で楽天のアフィリエイトリンクつきで表示されます（links.rakuten にその商品のURLを貼るとその商品に飛びます）。
 //   楽天APIが使えるようになったら、image と links.rakuten をAPIの値で埋めればそのまま使えます。
+// ・いちばんかんたんな方法：楽天の「商品リンク」で作ったHTMLを、そのまま rakutenHtml: `ここに貼る` に入れる（` は「バッククォート」）。
+//   リンク先と商品画像を自動で取り出して、画像と楽天ボタンに使います。
 const JACKETS = [
   // ===== モンベル (mont-bell) =====
   {
@@ -35,31 +37,35 @@ const JACKETS = [
     links: { amazon: "", rakuten: "", a8: "" }
   },
   {
-    id: "montbell-superior-roundneck",
+    id: "montbell-superior-roundneck-w",
     brand: "モンベル",
-    name: "スペリオダウン ラウンドネックジャケット",
-    search: "モンベル スペリオダウン ラウンドネックジャケット メンズ",
-    weight: 165,
+    name: "スペリオダウン ラウンドネックジャケット（レディース）",
+    search: "モンベル スペリオダウン ラウンドネックジャケット レディース",
+    weight: 145,
+    weightNote: "レディース",
     fp: 800,
     fillGrams: null,
     insul: "ダウン",
     hood: false,
     type: "薄手",
     shell: "20デニール",
-    packed: "Φ10×15cm",
-    packedL: 1.2,
-    price: 15000,
-    point: "えりのないカーディガン型で、フリースやジャケットの下に重ねやすい。1万円台なかばで買える800FP。",
-    tags: ["コスパ", "重ね着向き"],
-    official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101666",
-    links: { amazon: "", rakuten: "", a8: "" }
+    packed: "Φ9×16cm",
+    packedL: 1.1,
+    price: 14700,
+    point: "えりのないカーディガン型で、重ね着しやすい。あえてレディースを選ぶと、ロゴが目立たず普段着にもなじみやすい。145gと軽く、1万円台なかばで買える800FP。",
+    tags: ["レディース", "普段使い", "コスパ", "重ね着向き"],
+    official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101667",
+    links: { amazon: "", rakuten: "", a8: "" },
+    // 楽天の「商品リンク」（画像＋テキスト）のHTML。2026/11/11 時点 17,970円（ショップ価格）
+    rakutenHtml: `<a href="https://hb.afl.rakuten.co.jp/ichiba/59636339.4fcf00bd.5963633a.ed94b551/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmaido-selection%2F123-019%2F&amp;link_type=picttext&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/59636339.4fcf00bd.5963633a.ed94b551/?me_id=1249530&amp;item_id=10009966&amp;pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmaido-selection%2Fcabinet%2Fm_klmno-3%2Fmontbell-019_01z.jpg%3F_ex%3D300x300&amp;s=300x300&amp;t=picttext" border="0"></a>`
   },
   {
-    id: "montbell-superior-jacket",
+    id: "montbell-superior-jacket-w",
     brand: "モンベル",
-    name: "スペリオダウン ジャケット",
-    search: "モンベル スペリオダウン ジャケット メンズ",
-    weight: 190,
+    name: "スペリオダウン ジャケット（レディース）",
+    search: "モンベル スペリオダウン ジャケット レディース",
+    weight: 160,
+    weightNote: "レディース",
     fp: 800,
     fillGrams: null,
     insul: "ダウン",
@@ -68,11 +74,13 @@ const JACKETS = [
     shell: "10デニール",
     packed: "Φ10×15cm",
     packedL: 1.2,
-    price: 19500,
-    point: "定番中の定番。軽さ・暖かさ・値段のバランスがよく、はじめての登山用ダウンに選ばれやすい1着。",
-    tags: ["定番", "コスパ"],
-    official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101661",
-    links: { amazon: "", rakuten: "", a8: "" }
+    price: 18300,
+    point: "運営者が実際に持っていて、ふだんから使っている1着。キルトの格子が斜めに入ったデザインが、よくある横じまのダウンより好み。160gと軽く、軽さ・暖かさ・値段のバランスもよい定番。",
+    tags: ["運営者愛用", "レディース", "斜め格子", "見た目◎"],
+    official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101662",
+    links: { amazon: "", rakuten: "", a8: "" },
+    // 楽天の「商品リンク」（画像＋テキスト）のHTML。2026/11/11 時点 18,300円
+    rakutenHtml: `<a href="https://hb.afl.rakuten.co.jp/ichiba/596357a5.dd035ead.596357a6.0b386923/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fspray%2F1101662-2627%2F&amp;link_type=picttext&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/596357a5.dd035ead.596357a6.0b386923/?me_id=1237395&amp;item_id=10009974&amp;pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fspray%2Fcabinet%2F12601790%2Fimgrc0122323358.jpg%3F_ex%3D300x300&amp;s=300x300&amp;t=picttext" border="0"></a>`
   },
   {
     id: "montbell-plasma1000-alpine-parka",
@@ -109,10 +117,12 @@ const JACKETS = [
     packed: "Φ11×19cm",
     packedL: 1.9,
     price: 22500,
-    point: "スペリオダウンにフードがついたモデル。首から頭まで暖かく、テント場で寝る前の冷え対策にも。",
-    tags: ["フードつき", "定番"],
+    point: "スペリオダウンにフードがついたモデル。こちらは格子（キルト）が縦に入ったデザインなので、斜め格子のスペリオダウン ジャケット（レディース）と見た目を比べてみて。首から頭まで暖かく、テント場で寝る前の冷え対策にも。",
+    tags: ["フードつき", "縦格子", "定番"],
     official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101659",
-    links: { amazon: "", rakuten: "", a8: "" }
+    links: { amazon: "", rakuten: "", a8: "" },
+    // 楽天の「商品リンク」（画像＋テキスト）のHTML。2026/11/11 時点 28,480円〜（ショップ価格）
+    rakutenHtml: `<a href="https://hb.afl.rakuten.co.jp/ichiba/5963800a.29e232c7.5963800b.6ebc4978/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Falice00%2F00rdv6006%2F&amp;link_type=picttext&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/5963800a.29e232c7.5963800b.6ebc4978/?me_id=1406191&amp;item_id=10005264&amp;pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Falice00%2Fcabinet%2Fimgrc0154620196.jpg%3F_ex%3D300x300&amp;s=300x300&amp;t=picttext" border="0"></a>`
   },
   {
     id: "montbell-ignis-parka",
@@ -302,7 +312,9 @@ const JACKETS = [
     point: "化繊わたの定番。ぬれても暖かさが落ちにくく、洗濯機で洗える。ポケットにしまって持ち運べる。",
     tags: ["化繊", "ぬれに強い", "見た目◎"],
     official: "https://www.patagonia.jp/",
-    links: { amazon: "", rakuten: "", a8: "" }
+    links: { amazon: "", rakuten: "", a8: "" },
+    // 楽天の「商品リンク」（画像＋テキスト）のHTML。2026/11/11 時点 38,199円（ショップ価格）
+    rakutenHtml: `<a href="https://hb.afl.rakuten.co.jp/ichiba/59638c38.d88512dd.59638c39.ef02b02a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcotonas%2Fdcg-058%2F&amp;link_type=picttext&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/59638c38.d88512dd.59638c39.ef02b02a/?me_id=1331623&amp;item_id=10006505&amp;pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fcotonas%2Fcabinet%2Fp_abcde%2Fpatagonia-058_01.jpg%3F_ex%3D300x300&amp;s=300x300&amp;t=picttext" border="0"></a>`
   },
   {
     id: "patagonia-micro-puff-hoody",
@@ -456,25 +468,27 @@ const JACKETS = [
     links: { amazon: "", rakuten: "", a8: "" }
   },
   {
-    id: "arcteryx-atom-jacket",
+    id: "arcteryx-atom-hoody",
     brand: "アークテリクス",
-    name: "アトム ジャケット",
-    search: "アークテリクス アトム ジャケット メンズ",
-    weight: 335,
+    name: "アトム フーディ",
+    search: "アークテリクス アトム フーディ メンズ",
+    weight: 355,
     fp: null,
     fillGrams: null,
     insul: "化繊",
-    fillNote: "コアロフト 60g/m²",
-    hood: false,
+    fillNote: "化繊わた コアロフト 60g/m²",
+    hood: true,
     type: "薄手",
     shell: "20デニール",
     packed: null,
     packedL: null,
-    price: null,
-    point: "わきが伸びるフリース素材で動きやすい化繊ジャケット。行動中も着たままにでき、街でも人気の定番。",
-    tags: ["化繊", "動きやすい", "見た目◎"],
-    official: "https://arcteryx.com/us/jp/shop/mens/atom-jacket-9561",
-    links: { amazon: "", rakuten: "", a8: "" }
+    price: 49500,
+    point: "中わたはダウンではなく化繊（コアロフト）。わきが伸びるフリース素材で動きやすく、行動中も着たままにできる。街でも人気の定番。",
+    tags: ["化繊", "動きやすい", "フードつき", "見た目◎"],
+    official: "https://arcteryx.com/",
+    links: { amazon: "", rakuten: "", a8: "" },
+    // 楽天の「商品リンク」（画像＋テキスト）のHTML。2026/11/11 時点 49,500円
+    rakutenHtml: `<a href="https://hb.afl.rakuten.co.jp/ichiba/59648cf7.bd1a5aea.59648cf8.18c3ee2c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcanpanera%2Fa31458%2F&amp;link_type=picttext&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/59648cf7.bd1a5aea.59648cf8.18c3ee2c/?me_id=1265611&amp;item_id=10088744&amp;pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fcanpanera%2Fcabinet%2Fatsuma_review%2F13762960%2Fa31458_rv26fw.jpg%3F_ex%3D300x300&amp;s=300x300&amp;t=picttext" border="0"></a>`
   },
 
   // ===== デカトロン（フォルクラ） =====
