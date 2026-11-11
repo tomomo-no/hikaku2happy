@@ -60,11 +60,12 @@ const JACKETS = [
     rakutenHtml: `<a href="https://hb.afl.rakuten.co.jp/ichiba/59636339.4fcf00bd.5963633a.ed94b551/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmaido-selection%2F123-019%2F&amp;link_type=picttext&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/59636339.4fcf00bd.5963633a.ed94b551/?me_id=1249530&amp;item_id=10009966&amp;pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmaido-selection%2Fcabinet%2Fm_klmno-3%2Fmontbell-019_01z.jpg%3F_ex%3D300x300&amp;s=300x300&amp;t=picttext" border="0"></a>`
   },
   {
-    id: "montbell-superior-jacket",
+    id: "montbell-superior-jacket-w",
     brand: "モンベル",
-    name: "スペリオダウン ジャケット",
-    search: "モンベル スペリオダウン ジャケット メンズ",
-    weight: 190,
+    name: "スペリオダウン ジャケット（レディース）",
+    search: "モンベル スペリオダウン ジャケット レディース",
+    weight: 160,
+    weightNote: "レディース",
     fp: 800,
     fillGrams: null,
     insul: "ダウン",
@@ -73,11 +74,13 @@ const JACKETS = [
     shell: "10デニール",
     packed: "Φ10×15cm",
     packedL: 1.2,
-    price: 19500,
-    point: "定番中の定番。軽さ・暖かさ・値段のバランスがよく、はじめての登山用ダウンに選ばれやすい1着。",
-    tags: ["定番", "コスパ"],
-    official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101661",
-    links: { amazon: "", rakuten: "", a8: "" }
+    price: 18300,
+    point: "運営者が実際に持っていて、ふだんから使っている1着。キルトの格子が斜めに入ったデザインが、よくある横じまのダウンより好み。160gと軽く、軽さ・暖かさ・値段のバランスもよい定番。",
+    tags: ["運営者愛用", "レディース", "定番", "見た目◎"],
+    official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101662",
+    links: { amazon: "", rakuten: "", a8: "" },
+    // 楽天の「商品リンク」（画像＋テキスト）のHTML。2026/11/11 時点 18,300円
+    rakutenHtml: `<a href="https://hb.afl.rakuten.co.jp/ichiba/596357a5.dd035ead.596357a6.0b386923/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fspray%2F1101662-2627%2F&amp;link_type=picttext&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/596357a5.dd035ead.596357a6.0b386923/?me_id=1237395&amp;item_id=10009974&amp;pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fspray%2Fcabinet%2F12601790%2Fimgrc0122323358.jpg%3F_ex%3D300x300&amp;s=300x300&amp;t=picttext" border="0"></a>`
   },
   {
     id: "montbell-plasma1000-alpine-parka",
