@@ -468,25 +468,27 @@ const JACKETS = [
     links: { amazon: "", rakuten: "", a8: "" }
   },
   {
-    id: "arcteryx-atom-jacket",
+    id: "arcteryx-atom-hoody",
     brand: "アークテリクス",
-    name: "アトム ジャケット",
-    search: "アークテリクス アトム ジャケット メンズ",
-    weight: 335,
+    name: "アトム フーディ",
+    search: "アークテリクス アトム フーディ メンズ",
+    weight: 355,
     fp: null,
     fillGrams: null,
     insul: "化繊",
-    fillNote: "コアロフト 60g/m²",
-    hood: false,
+    fillNote: "化繊わた コアロフト 60g/m²",
+    hood: true,
     type: "薄手",
     shell: "20デニール",
     packed: null,
     packedL: null,
-    price: null,
-    point: "わきが伸びるフリース素材で動きやすい化繊ジャケット。行動中も着たままにでき、街でも人気の定番。",
-    tags: ["化繊", "動きやすい", "見た目◎"],
-    official: "https://arcteryx.com/us/jp/shop/mens/atom-jacket-9561",
-    links: { amazon: "", rakuten: "", a8: "" }
+    price: 49500,
+    point: "中わたはダウンではなく化繊（コアロフト）。わきが伸びるフリース素材で動きやすく、行動中も着たままにできる。街でも人気の定番。",
+    tags: ["化繊", "動きやすい", "フードつき", "見た目◎"],
+    official: "https://arcteryx.com/",
+    links: { amazon: "", rakuten: "", a8: "" },
+    // 楽天の「商品リンク」（画像＋テキスト）のHTML。2026/11/11 時点 49,500円
+    rakutenHtml: `<a href="https://hb.afl.rakuten.co.jp/ichiba/59648cf7.bd1a5aea.59648cf8.18c3ee2c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcanpanera%2Fa31458%2F&amp;link_type=picttext&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/59648cf7.bd1a5aea.59648cf8.18c3ee2c/?me_id=1265611&amp;item_id=10088744&amp;pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fcanpanera%2Fcabinet%2Fatsuma_review%2F13762960%2Fa31458_rv26fw.jpg%3F_ex%3D300x300&amp;s=300x300&amp;t=picttext" border="0"></a>`
   },
 
   // ===== デカトロン（フォルクラ） =====
