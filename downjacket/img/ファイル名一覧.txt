@@ -11,8 +11,15 @@ nanga-mountain-lodge-jacket.webp
 tnf-light-heat-jacket.webp
 tnf-thunder-jacket.webp
 patagonia-down-sweater-hoody.webp
+patagonia-nano-puff-hoody.webp
+patagonia-micro-puff-hoody.webp
+patagonia-das-light-hoody.webp
+patagonia-das-parka.webp
 mhw-ghost-whisperer-2.webp
 arcteryx-cerium-sl-hoody.webp
+arcteryx-cerium-sv-hoody.webp
+arcteryx-thorium-hoody.webp
+arcteryx-atom-jacket.webp
 decathlon-forclaz-down-jacket.webp
 decathlon-forclaz-trek500.webp
 decathlon-forclaz-trek900.webp

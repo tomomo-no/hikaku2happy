@@ -2,7 +2,8 @@
   const BRANDS = ["すべて"].concat([...new Set(JACKETS.map((j) => j.brand))]);
   const TYPES = ["すべて", "薄手", "標準", "厚手"];
   const HOODS = ["すべて", "フードあり", "フードなし"];
-  const state = { brand: "すべて", type: "すべて", hood: "すべて", sort: "weight-asc" };
+  const FILLS = ["すべて", "ダウン", "化繊"];
+  const state = { brand: "すべて", type: "すべて", hood: "すべて", fill: "すべて", sort: "weight-asc" };
 
   const yen = (n) => (n == null ? "要確認" : "約" + n.toLocaleString("ja-JP") + "円");
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -51,7 +52,9 @@
       (j) =>
         (state.brand === "すべて" || j.brand === state.brand) &&
         (state.type === "すべて" || j.type === state.type) &&
-        (state.hood === "すべて" || (state.hood === "フードあり") === j.hood)
+        (state.hood === "すべて" || (state.hood === "フードあり") === j.hood) &&
+        // 「ダウン＋化繊」はどちらで絞っても出す
+        (state.fill === "すべて" || j.insul.indexOf(state.fill) !== -1)
     );
     const big = Number.MAX_SAFE_INTEGER;
     const w = (j) => (j.weight ?? big);
@@ -70,8 +73,9 @@
   const weightCell = (j) =>
     (j.weight == null ? "要確認" : j.weight + " g") + (j.weightNote ? '<small class="sub">' + esc(j.weightNote) + "</small>" : "");
   const fpCell = (j) => (j.fp ? j.fp + " FP" : "—");
-  const fillCell = (j) => (j.fillGrams ? j.fillGrams + " g" : "—");
-  const insulTag = (j) => '<span class="tag tag-' + (j.insul === "ダウン" ? "double" : "single") + '">' + esc(j.insul) + "</span>";
+  const fillCell = (j) =>
+    (j.fillGrams ? j.fillGrams + " g" : "—") + (j.fillNote ? '<small class="sub">' + esc(j.fillNote) + "</small>" : "");
+  const insulTag = (j) => '<span class="tag tag-' + (j.insul === "ダウン" ? "double" : j.insul === "化繊" ? "charge" : "single") + '">' + esc(j.insul) + "</span>";
   const hoodCell = (j) => (j.hood ? "あり" : "なし");
   const packedCell = (j) =>
     (j.packed ? esc(j.packed) : "—") + (j.packed && j.packedL ? '<small class="sub">' + j.packedL + " L</small>" : "");
@@ -79,7 +83,7 @@
   function render() {
     const list = filtered();
     const maxW = Math.max(...JACKETS.map((j) => j.weight || 0));
-    document.getElementById("count").textContent = list.length + "件のダウンジャケット";
+    document.getElementById("count").textContent = list.length + "件のジャケット";
 
     document.getElementById("tableBody").innerHTML = list
       .map(
@@ -110,7 +114,7 @@
           "<div><dt>重さ</dt><dd>" + weightCell(j) + "</dd></div>" +
           "<div><dt>タイプ</dt><dd>" + esc(TYPE_LABEL[j.type]) + "</dd></div>" +
           "<div><dt>フィルパワー</dt><dd>" + fpCell(j) + "</dd></div>" +
-          "<div><dt>ダウン量</dt><dd>" + fillCell(j) + "</dd></div>" +
+          "<div><dt>中わた量</dt><dd>" + fillCell(j) + "</dd></div>" +
           "<div><dt>フード</dt><dd>" + hoodCell(j) + "</dd></div>" +
           "<div><dt>収納サイズ</dt><dd>" + packedCell(j) + "</dd></div>" +
           "</dl>" +
@@ -138,6 +142,7 @@
   chips("brandChips", BRANDS, "brand");
   chips("typeChips", TYPES, "type");
   chips("hoodChips", HOODS, "hood");
+  chips("fillChips", FILLS, "fill");
   document.getElementById("sort").addEventListener("change", (e) => {
     state.sort = e.target.value;
     render();

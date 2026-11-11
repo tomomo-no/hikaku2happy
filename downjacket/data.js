@@ -1,8 +1,8 @@
-// 登山用・軽量ダウンジャケットのデータ（メンズ）
+// 登山用・軽量ダウンジャケット（＋人気の化繊ジャケット）のデータ（メンズ）
 // ・weight は重さ（g）。モンベルは「平均重量」、ほかのメーカーは公表されているサイズの値です（weightNote にサイズを書いています）。
 //   わからないものは null（表では「要確認」、軽い順では最後）。
 // ・fp はフィルパワー（ダウンのふくらむ力）。fillGrams はダウンの量（g）。わからないものは null（表では「—」）。
-// ・insul は中わたの種類（"ダウン" / "ダウン＋化繊"）。hood はフードがあれば true。
+// ・insul は中わたの種類（"ダウン" / "ダウン＋化繊" / "化繊"）。fillNote は化繊わたの名前など。化繊の fillGrams は中わたの量。hood はフードがあれば true。
 // ・type は使いみちの目安："薄手"（行動中・インナー）/ "標準"（山小屋・テント場）/ "厚手"（冬山・冬キャンプ）。
 // ・packed は収納サイズ（直径×長さ）。packedL は収納時の容量（L）。
 // ・価格は2026年11月時点の国内の参考価格（税込・目安）。わからないものは null（表では「要確認」）。
@@ -283,6 +283,93 @@ const JACKETS = [
     links: { amazon: "", rakuten: "", a8: "" }
   },
 
+  {
+    id: "patagonia-nano-puff-hoody",
+    brand: "パタゴニア",
+    name: "ナノ・パフ・フーディ",
+    search: "パタゴニア ナノパフフーディ メンズ",
+    weight: 400,
+    fp: null,
+    fillGrams: 60,
+    insul: "化繊",
+    fillNote: "プリマロフト・ゴールド",
+    hood: true,
+    type: "標準",
+    shell: null,
+    packed: null,
+    packedL: null,
+    price: 40700,
+    point: "化繊わたの定番。ぬれても暖かさが落ちにくく、洗濯機で洗える。ポケットにしまって持ち運べる。",
+    tags: ["化繊", "ぬれに強い", "見た目◎"],
+    official: "https://www.patagonia.jp/",
+    links: { amazon: "", rakuten: "", a8: "" }
+  },
+  {
+    id: "patagonia-micro-puff-hoody",
+    brand: "パタゴニア",
+    name: "マイクロ・パフ・フーディ",
+    search: "パタゴニア マイクロパフフーディ メンズ",
+    weight: 264,
+    fp: null,
+    fillGrams: 65,
+    insul: "化繊",
+    fillNote: "プルマフィル",
+    hood: true,
+    type: "薄手",
+    shell: null,
+    packed: null,
+    packedL: null,
+    price: 39960,
+    point: "ダウンのようにふっくらした化繊わた「プルマフィル」を使った、軽さと暖かさのバランスがよい中わた入りフーディ。",
+    tags: ["化繊", "軽量", "ぬれに強い"],
+    official: "https://www.patagonia.jp/",
+    links: { amazon: "", rakuten: "", a8: "" }
+  },
+  {
+    id: "patagonia-das-light-hoody",
+    brand: "パタゴニア",
+    name: "DASライト・フーディ",
+    search: "パタゴニア DASライトフーディ メンズ",
+    weight: 320,
+    weightNote: "Mサイズ",
+    fp: null,
+    fillGrams: null,
+    insul: "化繊",
+    fillNote: "プルマフィル",
+    hood: true,
+    type: "標準",
+    shell: null,
+    packed: null,
+    packedL: null,
+    price: 42900,
+    point: "シェルの上から羽織る前提の化繊ジャケットを軽くしたモデル。冬の岩場や雪山の休憩で、さっと羽織れる。",
+    tags: ["化繊", "シェルの上から"],
+    official: "https://www.patagonia.jp/",
+    links: { amazon: "", rakuten: "", a8: "" }
+  },
+  {
+    id: "patagonia-das-parka",
+    brand: "パタゴニア",
+    name: "DASパーカ",
+    search: "パタゴニア DASパーカ メンズ",
+    weight: 556,
+    weightNote: "Mサイズ",
+    fp: null,
+    fillGrams: 173,
+    insul: "化繊",
+    fillNote: "プリマロフト・ゴールド",
+    hood: true,
+    type: "厚手",
+    shell: null,
+    packed: null,
+    packedL: null,
+    price: 64900,
+    point: "冬山の定番ビレイパーカ。体の中心に中わたを多めに入れていて、ぬれても暖かい。見た目もボリュームがあってかっこいい。",
+    tags: ["化繊", "冬山", "見た目◎"],
+    official: "https://www.patagonia.jp/",
+    links: { amazon: "", rakuten: "", a8: "" }
+  },
+
   // ===== マウンテンハードウェア =====
   {
     id: "mhw-ghost-whisperer-2",
@@ -325,6 +412,68 @@ const JACKETS = [
     point: "1000FPのダウンでフードつきなのに234g。わきの下は化繊わたで、ぬれやすい所を守る。すっきりしたデザインで見た目にこだわる人にも人気。",
     tags: ["1000FP", "見た目◎", "フードつき"],
     official: "https://arcteryx.com/us/jp/shop/mens/cerium-sl-hoody-1036",
+    links: { amazon: "", rakuten: "", a8: "" }
+  },
+
+  {
+    id: "arcteryx-cerium-sv-hoody",
+    brand: "アークテリクス",
+    name: "セリウム SV フーディ",
+    search: "アークテリクス セリウム SV フーディ メンズ",
+    weight: 436,
+    fp: 1000,
+    fillGrams: null,
+    insul: "ダウン",
+    hood: true,
+    type: "厚手",
+    shell: "20デニール",
+    packed: null,
+    packedL: null,
+    price: null,
+    point: "1000FPのダウンをたっぷり入れた冬用。厚手なのに400g台で、雪山のテント場や冬の写真撮影に。",
+    tags: ["1000FP", "冬山", "見た目◎"],
+    official: "https://arcteryx.com/us/jp/shop/mens/cerium-sv-hoody-0555",
+    links: { amazon: "", rakuten: "", a8: "" }
+  },
+  {
+    id: "arcteryx-thorium-hoody",
+    brand: "アークテリクス",
+    name: "ソリウム フーディ",
+    search: "アークテリクス ソリウム フーディ メンズ",
+    weight: 598,
+    fp: 750,
+    fillGrams: null,
+    insul: "ダウン",
+    hood: true,
+    type: "厚手",
+    shell: "30デニール",
+    packed: null,
+    packedL: null,
+    price: null,
+    point: "丈夫な30デニールの表地で、街でもガシガシ着られる厚手ダウン。冬キャンプや普段着の防寒に。",
+    tags: ["街でも", "丈夫", "見た目◎"],
+    official: "https://arcteryx.com/us/jp/shop/mens/thorium-hoody-0657",
+    links: { amazon: "", rakuten: "", a8: "" }
+  },
+  {
+    id: "arcteryx-atom-jacket",
+    brand: "アークテリクス",
+    name: "アトム ジャケット",
+    search: "アークテリクス アトム ジャケット メンズ",
+    weight: 335,
+    fp: null,
+    fillGrams: null,
+    insul: "化繊",
+    fillNote: "コアロフト 60g/m²",
+    hood: false,
+    type: "薄手",
+    shell: "20デニール",
+    packed: null,
+    packedL: null,
+    price: null,
+    point: "わきが伸びるフリース素材で動きやすい化繊ジャケット。行動中も着たままにでき、街でも人気の定番。",
+    tags: ["化繊", "動きやすい", "見た目◎"],
+    official: "https://arcteryx.com/us/jp/shop/mens/atom-jacket-9561",
     links: { amazon: "", rakuten: "", a8: "" }
   },
 
