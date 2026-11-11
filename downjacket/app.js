@@ -1,4 +1,15 @@
 (function () {
+  // 楽天の「商品リンク」で作ったHTMLを data.js の rakutenHtml に貼ると、
+  // そこから商品ページへのリンクと商品画像を取り出して使う（image・links.rakuten が空のときだけ）
+  JACKETS.forEach((j) => {
+    if (!j.rakutenHtml) return;
+    const href = (j.rakutenHtml.match(/href="(https:\/\/hb\.afl\.rakuten\.co\.jp\/[^"]+)"/) || [])[1];
+    const img = (j.rakutenHtml.match(/<img[^>]+src="(https:\/\/hbb\.afl\.rakuten\.co\.jp\/[^"]+)"/) || [])[1];
+    const unescape = (s) => s.replace(/&amp;/g, "&");
+    if (href && !j.links.rakuten) j.links.rakuten = unescape(href);
+    if (img && !j.image) j.image = unescape(img);
+  });
+
   const BRANDS = ["すべて"].concat([...new Set(JACKETS.map((j) => j.brand))]);
   const TYPES = ["すべて", "薄手", "標準", "厚手"];
   const HOODS = ["すべて", "フードあり", "フードなし"];

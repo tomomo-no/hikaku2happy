@@ -34,7 +34,7 @@ links: { amazon: "https://amzn.to/xxxx", rakuten: "https://hb.afl.rakuten.co.jp/
 ## 商品画像の入れ方
 `headlamp/img/`・`tent/img/`・`sleepingbag/img/`・`downjacket/img/`・`trailpack/img/` に `<商品id>.webp`（例：`nitecore-ut27.webp`）を置くと、比較表とスマホ用カードに自動で表示されます。画像がない商品は薄いアイコンが出ます。
 - おすすめ：正方形 800×800px、WebP、1枚100KB以下
-- ダウンジャケット（`downjacket/data.js`）は、楽天の「商品リンク」ツールで出てくる画像URLを `image: "https://thumbnail.image.rakuten.co.jp/..."` と貼るだけでも表示できます。楽天の画像は自動で楽天のアフィリエイトリンクつきになります（そのとき `links.rakuten` に同じ商品のURLを貼ってください）。
+- ダウンジャケット（`downjacket/data.js`）は、楽天の「商品リンク」で作ったHTMLを商品の `rakutenHtml: `…`` にそのまま貼るだけで、商品画像と楽天ボタンのリンクが自動で入ります。または、楽天の「商品リンク」ツールで出てくる画像URLを `image: "https://thumbnail.image.rakuten.co.jp/..."` と貼るだけでも表示できます。楽天の画像は自動で楽天のアフィリエイトリンクつきになります（そのとき `links.rakuten` に同じ商品のURLを貼ってください）。
 - メーカーやショップの写真は無断で使わない（自分で撮った写真、楽天・Amazonの公式リンクツールの画像、自分で生成した画像を使う）
 
 ## 楽天アフィリエイト

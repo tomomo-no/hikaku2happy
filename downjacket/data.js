@@ -12,6 +12,8 @@
 //   楽天の「商品リンク」で出てくる画像URL（https://thumbnail.image.rakuten.co.jp/... など）を image: "..." に貼ってもOK。
 //   楽天の画像は自動で楽天のアフィリエイトリンクつきで表示されます（links.rakuten にその商品のURLを貼るとその商品に飛びます）。
 //   楽天APIが使えるようになったら、image と links.rakuten をAPIの値で埋めればそのまま使えます。
+// ・いちばんかんたんな方法：楽天の「商品リンク」で作ったHTMLを、そのまま rakutenHtml: `ここに貼る` に入れる（` は「バッククォート」）。
+//   リンク先と商品画像を自動で取り出して、画像と楽天ボタンに使います。
 const JACKETS = [
   // ===== モンベル (mont-bell) =====
   {
@@ -52,7 +54,9 @@ const JACKETS = [
     point: "えりのないカーディガン型で、フリースやジャケットの下に重ねやすい。1万円台なかばで買える800FP。",
     tags: ["コスパ", "重ね着向き"],
     official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101666",
-    links: { amazon: "", rakuten: "", a8: "" }
+    links: { amazon: "", rakuten: "", a8: "" },
+    // 楽天の「商品リンク」（画像＋テキスト）のHTML。2026/11/11 時点 15,000円
+    rakutenHtml: `<a href="https://hb.afl.rakuten.co.jp/ichiba/596357a5.dd035ead.596357a6.0b386923/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fspray%2F1101666-2627%2F&amp;link_type=picttext&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/596357a5.dd035ead.596357a6.0b386923/?me_id=1237395&amp;item_id=10009994&amp;pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fspray%2Fcabinet%2F12601790%2Fimgrc0122454946.jpg%3F_ex%3D300x300&amp;s=300x300&amp;t=picttext" border="0"></a>`
   },
   {
     id: "montbell-superior-jacket",
