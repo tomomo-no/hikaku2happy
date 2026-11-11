@@ -190,5 +190,6 @@ table.simple th { background: #f0eee7; font-size: 13px; }
 
 @media (max-width: 760px) {
   .logo { white-space: nowrap; font-size: 18px; }
-  .site-header nav { gap: 10px; font-size: 12px; }
+  .site-header nav { gap: 10px; font-size: 12px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+  .site-header nav::-webkit-scrollbar { display: none; }
 }
