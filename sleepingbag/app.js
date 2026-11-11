@@ -63,6 +63,7 @@
     return '<span class="bar"><span style="width:' + Math.round((value / max) * 100) + '%"></span></span>';
   }
 
+  const shapeTag = (b) => (b.shape ? '<span class="tag tag-hybrid">' + esc(b.shape) + "</span>" : "");
   const fillTag = (b) => '<span class="tag tag-' + (b.fill === "ダウン" ? "double" : "single") + '">' + esc(b.fill) + "</span>";
   const fillText = (b) =>
     (b.fp ? b.fp + (b.fpPlus ? "+" : "") + "FP" : "") +
@@ -87,7 +88,7 @@
       .map(
         (b) =>
           "<tr>" +
-          '<td><div class="model">' + thumb(b, "thumb") + '<span class="model-name"><span class="brand">' + esc(b.brand) + "</span><strong>" + esc(b.name) + "</strong></span></div></td>" +
+          '<td><div class="model">' + thumb(b, "thumb") + '<span class="model-name"><span class="brand">' + esc(b.brand) + "</span><strong>" + esc(b.name) + "</strong>" + (b.shape ? '<small class="sub">' + esc(b.shape) + "</small>" : "") + (b.caution ? '<small class="sub">⚠ においの口コミあり</small>' : "") + "</span></div></td>" +
           '<td class="num">' + b.weight + " g" + bar(b.weight, maxW) + "</td>" +
           '<td class="num">' + comfortCell(b) + "</td>" +
           '<td class="num">' + limitCell(b) + "</td>" +
@@ -106,8 +107,9 @@
         (b) =>
           '<article class="card">' + thumb(b, "card-img") +
           '<div class="card-head"><span class="brand">' + esc(b.brand) + "</span><h3>" + esc(b.name) + "</h3>" +
-          '<div class="tags">' + fillTag(b) + b.tags.map((x) => '<span class="tag">' + esc(x) + "</span>").join("") + "</div></div>" +
+          '<div class="tags">' + fillTag(b) + shapeTag(b) + b.tags.filter((x) => x !== b.shape).map((x) => '<span class="tag">' + esc(x) + "</span>").join("") + "</div></div>" +
           '<p class="point">' + esc(b.point) + "</p>" +
+          (b.caution ? '<p class="small">⚠ ' + esc(b.caution) + "</p>" : "") +
           '<dl class="specs">' +
           "<div><dt>重さ</dt><dd>" + b.weight + " g</dd></div>" +
           "<div><dt>季節の目安</dt><dd>" + esc(seasonOf(b)) + "</dd></div>" +
