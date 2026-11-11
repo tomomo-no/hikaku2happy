@@ -76,7 +76,7 @@ const JACKETS = [
     packedL: 1.2,
     price: 18300,
     point: "運営者が実際に持っていて、ふだんから使っている1着。キルトの格子が斜めに入ったデザインが、よくある横じまのダウンより好み。160gと軽く、軽さ・暖かさ・値段のバランスもよい定番。",
-    tags: ["運営者愛用", "レディース", "定番", "見た目◎"],
+    tags: ["運営者愛用", "レディース", "斜め格子", "見た目◎"],
     official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101662",
     links: { amazon: "", rakuten: "", a8: "" },
     // 楽天の「商品リンク」（画像＋テキスト）のHTML。2026/11/11 時点 18,300円
@@ -117,10 +117,12 @@ const JACKETS = [
     packed: "Φ11×19cm",
     packedL: 1.9,
     price: 22500,
-    point: "スペリオダウンにフードがついたモデル。首から頭まで暖かく、テント場で寝る前の冷え対策にも。",
-    tags: ["フードつき", "定番"],
+    point: "スペリオダウンにフードがついたモデル。こちらは格子（キルト）が縦に入ったデザインなので、斜め格子のスペリオダウン ジャケット（レディース）と見た目を比べてみて。首から頭まで暖かく、テント場で寝る前の冷え対策にも。",
+    tags: ["フードつき", "縦格子", "定番"],
     official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101659",
-    links: { amazon: "", rakuten: "", a8: "" }
+    links: { amazon: "", rakuten: "", a8: "" },
+    // 楽天の「商品リンク」（画像＋テキスト）のHTML。2026/11/11 時点 28,480円〜（ショップ価格）
+    rakutenHtml: `<a href="https://hb.afl.rakuten.co.jp/ichiba/5963800a.29e232c7.5963800b.6ebc4978/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Falice00%2F00rdv6006%2F&amp;link_type=picttext&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/5963800a.29e232c7.5963800b.6ebc4978/?me_id=1406191&amp;item_id=10005264&amp;pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Falice00%2Fcabinet%2Fimgrc0154620196.jpg%3F_ex%3D300x300&amp;s=300x300&amp;t=picttext" border="0"></a>`
   },
   {
     id: "montbell-ignis-parka",
