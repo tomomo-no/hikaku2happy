@@ -1,4 +1,4 @@
-// 登山用・軽量ダウンジャケット（＋人気の化繊ジャケット）のデータ（メンズ）
+// 登山用・軽量ダウンジャケット（＋人気の化繊ジャケット）のデータ（メンズ中心。レディースは名前に明記）
 // ・weight は重さ（g）。モンベルは「平均重量」、ほかのメーカーは公表されているサイズの値です（weightNote にサイズを書いています）。
 //   わからないものは null（表では「要確認」、軽い順では最後）。
 // ・fp はフィルパワー（ダウンのふくらむ力）。fillGrams はダウンの量（g）。わからないものは null（表では「—」）。
@@ -37,26 +37,27 @@ const JACKETS = [
     links: { amazon: "", rakuten: "", a8: "" }
   },
   {
-    id: "montbell-superior-roundneck",
+    id: "montbell-superior-roundneck-w",
     brand: "モンベル",
-    name: "スペリオダウン ラウンドネックジャケット",
-    search: "モンベル スペリオダウン ラウンドネックジャケット メンズ",
-    weight: 165,
+    name: "スペリオダウン ラウンドネックジャケット（レディース）",
+    search: "モンベル スペリオダウン ラウンドネックジャケット レディース",
+    weight: 145,
+    weightNote: "レディース",
     fp: 800,
     fillGrams: null,
     insul: "ダウン",
     hood: false,
     type: "薄手",
     shell: "20デニール",
-    packed: "Φ10×15cm",
-    packedL: 1.2,
-    price: 15000,
-    point: "えりのないカーディガン型で、フリースやジャケットの下に重ねやすい。1万円台なかばで買える800FP。",
-    tags: ["コスパ", "重ね着向き"],
-    official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101666",
+    packed: "Φ9×16cm",
+    packedL: 1.1,
+    price: 14700,
+    point: "えりのないカーディガン型で、重ね着しやすい。あえてレディースを選ぶと、ロゴが目立たず普段着にもなじみやすい。145gと軽く、1万円台なかばで買える800FP。",
+    tags: ["レディース", "普段使い", "コスパ", "重ね着向き"],
+    official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101667",
     links: { amazon: "", rakuten: "", a8: "" },
-    // 楽天の「商品リンク」（画像＋テキスト）のHTML。2026/11/11 時点 15,000円
-    rakutenHtml: `<a href="https://hb.afl.rakuten.co.jp/ichiba/596357a5.dd035ead.596357a6.0b386923/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fspray%2F1101666-2627%2F&amp;link_type=picttext&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/596357a5.dd035ead.596357a6.0b386923/?me_id=1237395&amp;item_id=10009994&amp;pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fspray%2Fcabinet%2F12601790%2Fimgrc0122454946.jpg%3F_ex%3D300x300&amp;s=300x300&amp;t=picttext" border="0"></a>`
+    // 楽天の「商品リンク」（画像＋テキスト）のHTML。2026/11/11 時点 17,970円（ショップ価格）
+    rakutenHtml: `<a href="https://hb.afl.rakuten.co.jp/ichiba/59636339.4fcf00bd.5963633a.ed94b551/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmaido-selection%2F123-019%2F&amp;link_type=picttext&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/59636339.4fcf00bd.5963633a.ed94b551/?me_id=1249530&amp;item_id=10009966&amp;pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmaido-selection%2Fcabinet%2Fm_klmno-3%2Fmontbell-019_01z.jpg%3F_ex%3D300x300&amp;s=300x300&amp;t=picttext" border="0"></a>`
   },
   {
     id: "montbell-superior-jacket",
