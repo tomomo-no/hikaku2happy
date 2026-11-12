@@ -44,7 +44,7 @@ main h2 { font-size: 22px; margin: 40px 0 16px; padding-left: 12px; border-left:
 .pick { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 4px; }
 .pick-label { font-size: 12px; font-weight: 700; color: var(--accent); background: var(--accent-soft); align-self: flex-start; padding: 2px 8px; border-radius: 6px; }
 .pick strong { font-size: 16px; }
-.pick span:last-child { font-size: 13px; color: var(--muted); }
+.pick span:last-child, .pick span:not(.pick-label) { font-size: 13px; color: var(--muted); }
 
 .controls { display: flex; flex-wrap: wrap; gap: 16px 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
 .control { display: flex; flex-direction: column; gap: 6px; }
