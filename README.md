@@ -10,6 +10,8 @@
   - `data.js` … テントのデータ　`app.js` … 絞り込み・並び替え
 - `sleepingbag/` … 登山用寝袋（シュラフ）比較（https://hikaku2happy.com/sleepingbag/）
   - `data.js` … 寝袋のデータ　`app.js` … 絞り込み・並び替え　`guide.html` … 選び方
+- `sleepingmat/` … 登山用スリーピングマット比較（https://hikaku2happy.com/sleepingmat/）
+  - `data.js` … マットのデータ　`app.js` … 絞り込み・並び替え　`guide.html` … 選び方
 - `downjacket/` … 登山用ダウンジャケット比較（https://hikaku2happy.com/downjacket/）
   - `data.js` … ダウンジャケットのデータ　`app.js` … 絞り込み・並び替え
 - `trailpack/` … トレランザック比較（https://hikaku2happy.com/trailpack/）
@@ -32,11 +34,11 @@ links: { amazon: "https://amzn.to/xxxx", rakuten: "https://hb.afl.rakuten.co.jp/
 - 出力ディレクトリ：`/`（空欄でも可）
 
 ## 商品画像の入れ方
-`headlamp/img/`・`tent/img/`・`sleepingbag/img/`・`downjacket/img/`・`trailpack/img/` に `<商品id>.webp`（例：`nitecore-ut27.webp`）を置くと、比較表とスマホ用カードに自動で表示されます。画像がない商品は薄いアイコンが出ます。
+`headlamp/img/`・`tent/img/`・`sleepingbag/img/`・`sleepingmat/img/`・`downjacket/img/`・`trailpack/img/` に `<商品id>.webp`（例：`nitecore-ut27.webp`）を置くと、比較表とスマホ用カードに自動で表示されます。画像がない商品は薄いアイコンが出ます。
 - おすすめ：正方形 800×800px、WebP、1枚100KB以下
 - ダウンジャケット（`downjacket/data.js`）は、楽天の「商品リンク」で作ったHTMLを商品の `rakutenHtml: `…`` にそのまま貼るだけで、商品画像と楽天ボタンのリンクが自動で入ります。または、楽天の「商品リンク」ツールで出てくる画像URLを `image: "https://thumbnail.image.rakuten.co.jp/..."` と貼るだけでも表示できます。楽天の画像は自動で楽天のアフィリエイトリンクつきになります（そのとき `links.rakuten` に同じ商品のURLを貼ってください）。
 - メーカーやショップの写真は無断で使わない（自分で撮った写真、楽天・Amazonの公式リンクツールの画像、自分で生成した画像を使う）
 
 ## 楽天アフィリエイト
-`headlamp/app.js`・`tent/app.js`・`sleepingbag/app.js`・`downjacket/app.js`・`trailpack/app.js` の `RAKUTEN_AFF_ID` にIDが入っています。楽天ボタンはすべて自動でアフィリエイトリンクになります。`data.js` の `links.rakuten` に商品ごとのリンクを貼った場合はそちらが優先されます。
+`headlamp/app.js`・`tent/app.js`・`sleepingbag/app.js`・`sleepingmat/app.js`・`downjacket/app.js`・`trailpack/app.js` の `RAKUTEN_AFF_ID` にIDが入っています。楽天ボタンはすべて自動でアフィリエイトリンクになります。`data.js` の `links.rakuten` に商品ごとのリンクを貼った場合はそちらが優先されます。
 楽天で取り扱いのない商品は `noRakuten: true` と `official`（公式サイトURL）を設定すると、楽天ボタンの代わりに「公式サイト」ボタンが出ます。
