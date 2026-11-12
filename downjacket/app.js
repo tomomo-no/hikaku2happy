@@ -42,6 +42,10 @@
     return '<span class="' + cls + '">' + img + ph + "</span>";
   }
 
+  function reviewLink(item) {
+    return item.review ? '<a class="review-link" href="' + esc(item.review) + '">使ってみたレビューを読む →</a>' : "";
+  }
+
   // アフィリエイトURLが空なら、Amazon・楽天の検索ページを使う
   function buyLinks(item) {
     const q = encodeURIComponent(item.search);
@@ -100,7 +104,7 @@
       .map(
         (j) =>
           "<tr>" +
-          '<td><div class="model">' + thumb(j, "thumb") + '<span class="model-name"><span class="brand">' + esc(j.brand) + "</span><strong>" + esc(j.name) + "</strong></span></div></td>" +
+          '<td><div class="model">' + thumb(j, "thumb") + '<span class="model-name"><span class="brand">' + esc(j.brand) + "</span><strong>" + esc(j.name) + "</strong>" + reviewLink(j) + "</span></div></td>" +
           '<td class="num">' + weightCell(j) + (j.weight ? bar(j.weight, maxW) : "") + "</td>" +
           '<td class="num">' + fpCell(j) + "</td>" +
           '<td class="num">' + fillCell(j) + "</td>" +
@@ -118,7 +122,7 @@
       .map(
         (j) =>
           '<article class="card">' + thumb(j, "card-img") +
-          '<div class="card-head"><span class="brand">' + esc(j.brand) + "</span><h3>" + esc(j.name) + "</h3>" +
+          '<div class="card-head"><span class="brand">' + esc(j.brand) + "</span><h3>" + esc(j.name) + "</h3>" + reviewLink(j) +
           '<div class="tags">' + insulTag(j) + j.tags.map((x) => '<span class="tag">' + esc(x) + "</span>").join("") + "</div></div>" +
           '<p class="point">' + esc(j.point) + "</p>" +
           '<dl class="specs">' +
