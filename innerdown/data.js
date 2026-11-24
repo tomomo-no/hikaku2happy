@@ -54,7 +54,10 @@ const INNERS = [
     forWho: "体の真ん中だけ暖めたい人、通勤や旅行でジャケットの下に1枚足したい人",
     sources: [{ label: "モンベル公式（平均重量・FP・素材・収納サイズ・価格）", url: "https://webshop.montbell.jp/goods/disp.php?product_id=1101672" }],
     official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101672",
-    links: { amazon: "", rakuten: "https://item.rakuten.co.jp/alice00/00brd5005/" }
+    // 楽天の「商品リンク」（画像＋テキスト）から取り出したリンクと画像（ショップ：WILLS / import-ss-shop）
+    shopNote: "楽天のリンク先ショップの価格：14,100円（税込・送料無料、2026年11月25日時点）。モンベル公式の価格（12,300円）より高めです",
+    image: "https://hbb.afl.rakuten.co.jp/hgb/59f03fcd.83721d13.59f03fce.d6d661c4/?me_id=1310559&item_id=10048010&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fimport-ss-shop%2Fcabinet%2Fgoq031%2F52032_1.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/59f03fcd.83721d13.59f03fce.d6d661c4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fimport-ss-shop%2F1101672%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" }
   },
   {
     id: "montbell-superior-roundneck-vest-w",
