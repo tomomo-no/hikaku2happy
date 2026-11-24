@@ -14,6 +14,8 @@
   - `data.js` … マットのデータ　`app.js` … 絞り込み・並び替え　`guide.html` … 選び方
 - `downjacket/` … 登山用ダウンジャケット比較（https://hikaku2happy.com/downjacket/）
   - `data.js` … ダウンジャケットのデータ　`app.js` … 絞り込み・並び替え
+- `innerdown/` … インナーダウン比較（https://hikaku2happy.com/innerdown/）
+  - `data.js` … インナーダウンのデータ（出典URLつき）　`app.js` … 絞り込み・並び替え・各商品の説明
 - `trailpack/` … トレランザック比較（https://hikaku2happy.com/trailpack/）
   - `data.js` … ザックのデータ　`app.js` … 絞り込み・並び替え　`guide.html` … 選び方
 - `style.css` … 全ページ共通のデザイン
