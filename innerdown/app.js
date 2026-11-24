@@ -19,7 +19,12 @@
   function thumb(item, cls) {
     const src = item.image || "img/" + item.id + ".webp";
     const img = '<img src="' + esc(src) + '" alt="' + esc(item.brand + " " + item.name) + '" loading="lazy" width="400" height="400" onerror="this.closest(\'.' + cls + '\').classList.add(\'noimg\');this.remove()">';
-    return '<span class="' + cls + '">' + img + '<span class="ph" aria-hidden="true">🧥</span></span>';
+    const ph = '<span class="ph" aria-hidden="true">🧥</span>';
+    // 楽天の画像は楽天のアフィリエイトリンクで囲む（楽天の画像を使うときのルール）
+    if (item.image && /(^|\/\/)[^/]*\.rakuten\.co\.jp\//.test(item.image)) {
+      return '<a class="' + cls + '" href="' + esc(rakutenUrl(item)) + '" target="_blank" rel="nofollow sponsored noopener">' + img + ph + "</a>";
+    }
+    return '<span class="' + cls + '">' + img + ph + "</span>";
   }
 
   function buyLinks(item) {
@@ -114,6 +119,7 @@
         "</div>" +
         '<p class="for-who"><strong>こんな人におすすめ：</strong>' + esc(j.forWho) + "</p>" +
         '<p class="small">出典：' + j.sources.map((s) => '<a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.label) + "</a>").join("、") + "（" + CHECKED + "確認）" + (j.priceNote ? "。価格：" + esc(j.priceNote) : "") + "</p>" +
+        (j.shopNote ? '<p class="small">' + esc(j.shopNote) + "。価格は変わることがあります。最新の価格はリンク先で確認してください。</p>" : "") +
         '<div class="buy">' + buyLinks(j) + "</div>" +
         "</article>"
     ).join("");

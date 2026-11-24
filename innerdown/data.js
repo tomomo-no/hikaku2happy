@@ -31,7 +31,10 @@ const INNERS = [
     forWho: "山でもふだんでも使える、軽いインナーダウンを1枚目に選びたい人",
     sources: [{ label: "モンベル公式（平均重量・FP・素材・収納サイズ・価格）", url: "https://webshop.montbell.jp/goods/disp.php?product_id=1101666" }],
     official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101666",
-    links: { amazon: "", rakuten: "https://item.rakuten.co.jp/locondo/mo2001em000511/" }
+    // 楽天の「商品リンク」（画像＋テキスト）から取り出したリンクと画像（ショップ：spray）
+    shopNote: "楽天のリンク先ショップの価格：15,000円（税込・送料無料、2026年11月25日時点）",
+    image: "https://hbb.afl.rakuten.co.jp/hgb/596357a5.dd035ead.596357a6.0b386923/?me_id=1237395&item_id=10009994&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fspray%2Fcabinet%2F12601790%2Fimgrc0122454946.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/596357a5.dd035ead.596357a6.0b386923/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fspray%2F1101666-2627%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" }
   },
   {
     id: "montbell-superior-vneck-vest-m",
