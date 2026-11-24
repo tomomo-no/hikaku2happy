@@ -226,6 +226,9 @@ const INNERS = [
     forWho: "できるだけ安く、ためしにインナーダウンを使ってみたい人",
     sources: [{ label: "タイオン公式（FP・素材・付属品・定価）", url: "https://taion-wear.jp/products/taion-001" }],
     official: "https://taion-wear.jp/products/taion-001",
-    links: { amazon: "", rakuten: "https://item.rakuten.co.jp/taion/taion-001m/" }
+    // 楽天の「商品リンク」（画像＋テキスト）から取り出したリンクと画像（TAION公式の楽天店）
+    shopNote: "楽天のリンク先ショップ（タイオン公式の楽天店）の価格：5,940円（税込・送料別、2026年11月25日時点）",
+    image: "https://hbb.afl.rakuten.co.jp/hgb/59f04df3.682146dc.59f04df4.b53c6a3a/?me_id=1323085&item_id=10000246&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Ftaion%2Fcabinet%2Fbasic%2F001_top.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/59f04df3.682146dc.59f04df4.b53c6a3a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftaion%2Ftaion-001m%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" }
   }
 ];
