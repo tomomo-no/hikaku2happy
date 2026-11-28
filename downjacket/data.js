@@ -207,7 +207,9 @@ const JACKETS = [
     point: "雪山のテント場や冬の早朝の撮影に。重さは450gほどあるが、そのぶんボリュームがあって見た目もしっかり。",
     tags: ["冬山", "ボリュームあり"],
     official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101708",
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：45,800円（税込、送料無料)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a12f089.4654c89e.5a12f08a.f11e0c51/?me_id=1227318&item_id=10299368&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Friverall%2Fcabinet%2Fvariation%2Friv859.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a12f089.4654c89e.5a12f08a.f11e0c51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Friverall%2Friv859%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
 
   // ===== ナンガ (NANGA) =====
@@ -254,7 +256,9 @@ const JACKETS = [
     point: "薄くて軽いインナーダウン。ノースフェイスのロゴで見た目もよく、山でも普段着でも使いやすい。",
     tags: ["見た目◎", "重ね着向き"],
     official: "https://www.goldwin.co.jp/tnf/",
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：24,948円（税込、送料別)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a133240.5cd439a7.5a133241.8b213ff4/?me_id=1208888&item_id=10070999&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fsworld%2Fcabinet%2Fsmw20250827%2Fg08-a2956-2958-1.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a133240.5cd439a7.5a133241.8b213ff4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsworld%2Fg08-a2956-2958%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
   {
     id: "tnf-thunder-jacket",

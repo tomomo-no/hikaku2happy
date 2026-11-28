@@ -21,7 +21,9 @@ const MATS = [
     price: 36900,
     point: "軽さと暖かさのバランスで選ぶならまずこれ。370gでR値4.5、1Lボトルほどの大きさにたためます。",
     tags: ["定番", "軽量"],
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：40,700円（税込、送料別)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a133c5b.377caaf9.5a133c5c.fb02a978/?me_id=1439125&item_id=10004863&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fp2chiba%2Fcabinet%2Fsukeneko6%2Ftrnairxlnex_1.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a133c5b.377caaf9.5a133c5c.fb02a978/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fp2chiba%2Ftrnairxlnex-r%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
   {
     id: "thermarest-neoair-xtherm-nxt-r",
