@@ -20,7 +20,9 @@ const HEADLAMPS = [
     price: 12000,
     point: "充電池と乾電池の両方が使える定番モデル。山小屋泊から日帰りまで幅広く使えます。",
     tags: ["定番", "乾電池OK"],
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：12,177円（税込、送料別)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a131cb1.9d84deb8.5a131cb2.8f608943/?me_id=1205477&item_id=10049908&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fyoshikip2%2Fcabinet%2Fsukeneko8%2Fe065ab0x_01.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a131cb1.9d84deb8.5a131cb2.8f608943/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyoshikip2%2Fe065ab0x%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
   {
     id: "petzl-swift-rl",
@@ -38,7 +40,9 @@ const HEADLAMPS = [
     price: 18500,
     point: "周りの明るさに合わせて自動で明るさを変える「リアクティブライティング」搭載。夜間行動が多い人に。",
     tags: ["高出力", "自動調光"],
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：19,008円（税込、送料別)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a131cb1.9d84deb8.5a131cb2.8f608943/?me_id=1205477&item_id=10051359&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fyoshikip2%2Fcabinet%2Fsukeneko9%2Fe095bc_01.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a131cb1.9d84deb8.5a131cb2.8f608943/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyoshikip2%2Fe095bc%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
 
   // ===== ブラックダイヤモンド (Black Diamond) =====
@@ -58,7 +62,9 @@ const HEADLAMPS = [
     price: 6380,
     point: "手ごろな価格で水没にも強いIPX7。はじめての1台や予備用に。",
     tags: ["コスパ", "乾電池OK", "2026新型"],
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：5,940円（税込、送料別)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a133c5b.377caaf9.5a133c5c.fb02a978/?me_id=1439125&item_id=10000102&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fp2chiba%2Fcabinet%2Fir20260305%2Fbd8130900x_1.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a133c5b.377caaf9.5a133c5c.fb02a978/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fp2chiba%2Fbdcosmo350%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
   {
     id: "bd-spot",
@@ -112,7 +118,9 @@ const HEADLAMPS = [
     price: 13640,
     point: "ブラックダイヤモンドの普段使いモデルで最も明るい1台。バッテリー交換もできます。",
     tags: ["高出力", "防水", "2026新型"],
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：13,640円（税込、送料無料)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/59648cf7.bd1a5aea.59648cf8.18c3ee2c/?me_id=1265611&item_id=10107885&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fcanpanera%2Fcabinet%2Fitem273%2Fitem_b17-781_0.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/59648cf7.bd1a5aea.59648cf8.18c3ee2c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcanpanera%2Fb17-781%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
 
   // ===== レッドレンザー (Ledlenser) =====
@@ -132,7 +140,9 @@ const HEADLAMPS = [
     price: 7500,
     point: "単3電池1本でも動くハイブリッド式。ライト部分を外してハンドライトにもなります。",
     tags: ["コスパ", "乾電池OK"],
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：8,800円（税込、送料無料)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a134a9b.a2cd5068.5a134a9c.21b7cb3d/?me_id=1349092&item_id=10001148&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fsapporo-apollo%2Fcabinet%2Fimage3%2F32468_1.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a134a9b.a2cd5068.5a134a9c.21b7cb3d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsapporo-apollo%2F32468%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
   {
     id: "ledlenser-hf4r-core",
@@ -150,7 +160,9 @@ const HEADLAMPS = [
     price: null,
     point: "72gの軽さで完全防水IP68。軽さと防水性を両立したい人に。",
     tags: ["軽量", "防水"],
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：5,594円（税込、送料無料)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a134b71.c412afe6.5a134b72.3df95971/?me_id=1270903&item_id=11429676&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fr-kojima%2Fcabinet%2Fn0000000900%2F4058205031684_1.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a134b71.c412afe6.5a134b72.3df95971/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fr-kojima%2F4058205031684%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
   {
     id: "ledlenser-hf6r-core",
@@ -168,7 +180,9 @@ const HEADLAMPS = [
     price: 10000,
     point: "800ルーメンの明るさと完全防水IP68。悪天候でも頼れるパワフルな1台。",
     tags: ["高出力", "防水"],
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：10,890円（税込、送料無料)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a134b71.c412afe6.5a134b72.3df95971/?me_id=1270903&item_id=11429678&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fr-kojima%2Fcabinet%2Fn0000000899%2F4058205031837_1.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a134b71.c412afe6.5a134b72.3df95971/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fr-kojima%2F4058205031837%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
 
   // ===== ナイトコア (Nitecore) =====
@@ -188,7 +202,9 @@ const HEADLAMPS = [
     price: 6050,
     point: "わずか38g。荷物を1gでも軽くしたいUL（ウルトラライト）派の予備ライトにも。",
     tags: ["軽量", "コスパ"],
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：4,999円～（税込、送料別)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a134ed5.d5e0852e.5a134ed6.bd436802/?me_id=1338181&item_id=10001062&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fliten-up-your-bike%2Fcabinet%2Foutdoor%2Flantern%2Fnu20thumb.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a134ed5.d5e0852e.5a134ed6.bd436802/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fliten-up-your-bike%2F1019%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
   {
     id: "nitecore-nu25-mct-ul",
@@ -206,7 +222,9 @@ const HEADLAMPS = [
     price: 8580,
     point: "47gで400ルーメン。光の色（暖色〜白色）を切り替えられ、霧の中でも見やすい。",
     tags: ["軽量", "人気"],
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：8,580円（税込、送料別)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a131cb1.9d84deb8.5a131cb2.8f608943/?me_id=1205477&item_id=10051013&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fyoshikip2%2Fcabinet%2Fir20251022%2Fnc42520_1.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a131cb1.9d84deb8.5a131cb2.8f608943/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyoshikip2%2Fnc42520%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
   {
     id: "nitecore-ut27",
@@ -225,7 +243,8 @@ const HEADLAMPS = [
     point: "電球色・昼白色・昼光色の3色を切り替えられる、トレイルランニング向けのモデル。霧や雨の日は電球色が見やすいです。",
     tags: ["乾電池OK", "3色切替", "実機レビューあり"],
     review: "/headlamp/review-ut27.html",
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンク（画像は自作の img/nitecore-ut27.webp を使う）。リンク先ショップの価格：13,200円（税込、送料無料)（2026/11/28時点）
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/59648cf7.bd1a5aea.59648cf8.18c3ee2c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcanpanera%2Fn79004%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
   {
     id: "nitecore-nu33",
@@ -243,6 +262,8 @@ const HEADLAMPS = [
     price: 8800,
     point: "80gで700ルーメン、長時間モードも優秀。明るさ・軽さ・価格のバランスが良い。",
     tags: ["コスパ", "高出力"],
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：8,000円（税込、送料別)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a135126.836f1b08.5a135127.18c86fc3/?me_id=1283522&item_id=10038510&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fauc-hercules-gear%2Fcabinet%2Fnewproduct21%2Fnc-nu33_1.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a135126.836f1b08.5a135127.18c86fc3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fauc-hercules-gear%2Fnc-nu33%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   }
 ];

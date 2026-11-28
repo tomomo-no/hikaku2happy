@@ -9,9 +9,16 @@
 
   // 商品画像：img/<id>.webp を置くと自動で表示。無い場合はプレースホルダー
   // （別のファイル名やURLを使うときは data.js に image: "..." を書く）
+  // 楽天の画像は楽天のアフィリエイトリンクで囲む（楽天の画像を使うときのルール）
+  const isRakutenImage = (src) => /(^|\/\/)[^/]*\.rakuten\.co\.jp\//.test(src) || /(^|\/\/)[^/]*\.r10s\.jp\//.test(src);
   function thumb(item, cls) {
     const src = item.image || "img/" + item.id + ".webp";
-    return '<span class="' + cls + '"><img src="' + esc(src) + '" alt="' + esc(item.brand + " " + item.name) + '" loading="lazy" width="400" height="400" onerror="this.parentNode.classList.add(\'noimg\');this.remove()"><span class="ph" aria-hidden="true">🔦</span></span>';
+    const inner = '<img src="' + esc(src) + '" alt="' + esc(item.brand + " " + item.name) + '" loading="lazy" width="400" height="400" onerror="this.parentNode.classList.add(\'noimg\');this.remove()"><span class="ph" aria-hidden="true">🔦</span>';
+    if (item.image && isRakutenImage(item.image)) {
+      const url = rakutenAff(item.links.rakuten || "https://search.rakuten.co.jp/search/mall/" + encodeURIComponent(item.brand + " " + item.name + " ヘッドランプ") + "/");
+      return '<a class="' + cls + '" href="' + esc(url) + '" target="_blank" rel="nofollow sponsored noopener">' + inner + "</a>";
+    }
+    return '<span class="' + cls + '">' + inner + "</span>";
   }
 
   // 実機レビューがある商品にはレビューへのリンクを出す
