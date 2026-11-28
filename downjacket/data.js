@@ -34,7 +34,9 @@ const JACKETS = [
     point: "130gと、ダウンジャケットでは最軽量クラス。手のひらサイズにたためて、夏山の山小屋泊やウルトラライト派の保温着に。",
     tags: ["最軽量クラス", "1000FP"],
     official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101493",
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：31,500円（税込、送料無料)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/59f03fcd.83721d13.59f03fce.d6d661c4/?me_id=1310559&item_id=10048600&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fimport-ss-shop%2Fcabinet%2Fmontbellfolder%2F1101493.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/59f03fcd.83721d13.59f03fce.d6d661c4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fimport-ss-shop%2F1101493%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
   {
     id: "montbell-superior-roundneck-w",
@@ -183,7 +185,9 @@ const JACKETS = [
     point: "ライトアルパインにフードつき。秋のテント泊や冬キャンプで、1着あると安心できる暖かさ。",
     tags: ["フードつき", "街でも"],
     official: "https://webshop.montbell.jp/goods/disp.php?product_id=1101606",
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：37,850円～（税込、送料無料)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a12f089.4654c89e.5a12f08a.f11e0c51/?me_id=1227318&item_id=10298944&pc=https%3A%2F%2Fimage.rakuten.co.jp%2Friverall%2Fcabinet%2Fgoen62%2Frxl1101606bk-z.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a12f089.4654c89e.5a12f08a.f11e0c51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Friverall%2Friv801%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
   {
     id: "montbell-alpine-parka",
@@ -225,7 +229,9 @@ const JACKETS = [
     point: "国産ダウンのナンガらしい、すっきりしたシルエット。山小屋やキャンプ場はもちろん、街で着ても浮かないデザイン。",
     tags: ["日本製ダウン", "街でも", "見た目◎"],
     official: "https://nanga.jp/",
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：44,000円（税込、送料無料)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a12f428.d5ef3db2.5a12f429.8924844a/?me_id=1299133&item_id=10006594&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmoonloid%2Fcabinet%2F2609%2Fn2620-0b014a-ar.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a12f428.d5ef3db2.5a12f429.8924844a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmoonloid%2Fn2620-0b014a%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
 
   // ===== ザ・ノース・フェイス =====
@@ -269,7 +275,9 @@ const JACKETS = [
     point: "ダウンと化繊わたを組み合わせたハイブリッド。歩きながら着ても蒸れにくく、街着としても人気。",
     tags: ["ハイブリッド", "見た目◎"],
     official: "https://www.goldwin.co.jp/tnf/",
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：28,158円～（税込、送料無料)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a12f7d7.2df420af.5a12f7d8.24ea8fef/?me_id=1192233&item_id=11600330&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fesports%2Fcabinet%2F6000-227%2F6000000149024.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a12f7d7.2df420af.5a12f7d8.24ea8fef/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fesports%2F6000000149024%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
 
   // ===== パタゴニア =====
@@ -291,7 +299,9 @@ const JACKETS = [
     point: "街でもよく見かける定番デザイン。カラーが多く、見た目で選びたい人の候補に。登山では少し重め。",
     tags: ["見た目◎", "カラー豊富", "街でも"],
     official: "https://www.patagonia.jp/",
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：45,100円（税込、送料無料)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a12fa60.886c1ed7.5a12fa61.26b7d019/?me_id=1260293&item_id=10052422&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Ftre-style%2Fcabinet%2Fracoon_41%2Fpg26fw172_1.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a12fa60.886c1ed7.5a12fa61.26b7d019/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftre-style%2Fpg26fw172%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
 
   {
@@ -466,7 +476,9 @@ const JACKETS = [
     point: "丈夫な30デニールの表地で、街でもガシガシ着られる厚手ダウン。冬キャンプや普段着の防寒に。",
     tags: ["街でも", "丈夫", "見た目◎"],
     official: "https://arcteryx.com/us/jp/shop/mens/thorium-hoody-0657",
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：97,900円（税込、送料別)（2026/11/28時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/5a1306f8.0a94b37b.5a1306f9.5caf49e5/?me_id=1180109&item_id=10019690&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fjalana%2Fcabinet%2Fimg01%2Farcteryx%2Farcx-thrmhd.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/5a1306f8.0a94b37b.5a1306f9.5caf49e5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fjalana%2Farcx-thriumhood%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
   {
     id: "arcteryx-atom-hoody",
@@ -533,7 +545,9 @@ const JACKETS = [
     point: "800FPのダウンでフードつき、それで1万円台なかば。予算をおさえて暖かい1着がほしい人に。",
     tags: ["コスパ", "フードつき"],
     official: "https://decathlon.co.jp/",
-    links: { amazon: "", rakuten: "", a8: "" }
+    // 楽天の「商品リンク」から取り出したリンクと画像。リンク先ショップの価格：17,899円（税込、送料別)（2026/11/25時点）
+    image: "https://hbb.afl.rakuten.co.jp/hgb/59f1c1b3.8f59f294.59f1c1b4.18f499aa/?me_id=1271197&item_id=10621529&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fstore-megasports%2Fcabinet%2Fimg%2F3623%2F86295540.jpg%3F_ex%3D300x300&s=300x300&t=picttext",
+    links: { amazon: "", rakuten: "https://hb.afl.rakuten.co.jp/ichiba/59f1c1b3.8f59f294.59f1c1b4.18f499aa/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fstore-megasports%2F86295540%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D", a8: "" }
   },
   {
     id: "decathlon-forclaz-trek900",
